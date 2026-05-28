@@ -32,3 +32,8 @@ LOG COMMANDS:
 journalctl -u service
 <img width="1347" height="162" alt="image" src="https://github.com/user-attachments/assets/2a1fb52b-9581-4ce5-9b50-9292188330f4" />
 
+tail -n 30 /var/log/auth.log
+
+<img width="1360" height="434" alt="image" src="https://github.com/user-attachments/assets/f0ad6947-5a11-468e-be68-5b8d9ae5b461" />
+
+
