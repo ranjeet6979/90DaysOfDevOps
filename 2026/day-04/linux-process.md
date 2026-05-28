@@ -13,6 +13,12 @@ ps -ef
 
 pgrep - search for processes by name and return their process IDs (PIDs)
 
+<img width="1342" height="87" alt="image" src="https://github.com/user-attachments/assets/88d8c6e1-2c12-42e0-af81-b15cde45a4d9" />
+
+
+<img width="352" height="62" alt="image" src="https://github.com/user-attachments/assets/c98c1601-df96-443c-a40b-8d544747b89d" />
+
+
 SERVICE COMMANDS:
 systemctl status: systemd controller
 <img width="1344" height="387" alt="image" src="https://github.com/user-attachments/assets/456dc39d-2ac4-4df0-a8a3-04a93b844dd9" />
