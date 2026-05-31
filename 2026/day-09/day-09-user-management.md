@@ -7,13 +7,13 @@ Create three users with home directories and passwords:
 - `berlin`
 - `professor`
   
-<img width="1040" height="1058" alt="image" src="https://github.com/user-attachments/assets/ec326aba-284e-4367-85bc-345e95869b3d" />
+<img width="520" height="529" alt="Screenshot 2026-05-31 at 5 43 14 PM" src="https://github.com/user-attachments/assets/82a18636-cb91-48c0-bf82-13311a488c92" />
 
 **Verify:** Check `/etc/passwd` and `/home/` directory
 
-<img width="1040" height="1058" alt="image" src="https://github.com/user-attachments/assets/7d53e19f-e3f6-41c2-bce1-f06449847a1d" />
+<img width="466" height="95" alt="Screenshot 2026-05-31 at 5 45 03 PM" src="https://github.com/user-attachments/assets/b758f3e8-4b6b-42a0-83cf-45740864ac59" />
 
-<img width="1040" height="1058" alt="image" src="https://github.com/user-attachments/assets/ad1da147-1e24-413c-b73d-572db8b94131" />
+<img width="527" height="129" alt="Screenshot 2026-05-31 at 5 45 45 PM" src="https://github.com/user-attachments/assets/532955bc-6c04-4114-bde1-910688a8c391" />
 
 ---
 
@@ -25,7 +25,7 @@ Create two groups:
 
 **Verify:** Check `/etc/group`
 
-<img width="1040" height="1058" alt="image" src="https://github.com/user-attachments/assets/2130710f-ad00-4314-9d7f-cfa1e92f89c5" />
+<img width="501" height="363" alt="Screenshot 2026-05-31 at 5 46 51 PM" src="https://github.com/user-attachments/assets/d1c2c5c1-18c9-4ded-a2d0-7c6554ec381b" />
 
 ---
 
@@ -36,12 +36,11 @@ Assign users:
 - `berlin` → `developers` + `admins` (both groups)
 - `professor` → `admins`
 
-<img width="1040" height="1058" alt="image" src="https://github.com/user-attachments/assets/0d47ebc1-f7fc-4222-b9aa-32e70a5512ca" />
-
+<img width="526" height="147" alt="Screenshot 2026-05-31 at 5 47 57 PM" src="https://github.com/user-attachments/assets/20abf87d-8f74-4b99-9abb-4ceffa1878bb" />
 
 **Verify:** Use appropriate command to check group membership
 
-<img width="1040" height="1058" alt="image" src="https://github.com/user-attachments/assets/fcd43f18-d6cc-4083-be4d-1d333df38e1a" />
+<img width="478" height="111" alt="Screenshot 2026-05-31 at 5 51 18 PM" src="https://github.com/user-attachments/assets/6dec159f-6baf-41b7-a3ce-9da910d036af" />
 
 ---
 
@@ -54,7 +53,7 @@ Assign users:
 
 **Verify:** Check permissions and test file creation
 
-<img width="1040" height="1058" alt="image" src="https://github.com/user-attachments/assets/91ac949a-a736-4ff7-a7f4-82c642fa6e96" />
+<img width="500" height="696" alt="Screenshot 2026-05-31 at 6 00 25 PM" src="https://github.com/user-attachments/assets/d587a50e-0493-45bc-888a-6714f031ff38" />
 
 ---
 
@@ -64,13 +63,5 @@ Assign users:
 2. Create group `project-team`
 3. Add `nairobi` and `tokyo` to `project-team`
 4. Create `/opt/team-workspace` directory
-
-<img width="1040" height="1058" alt="image" src="https://github.com/user-attachments/assets/3a2d770e-d53c-408d-b279-5a8d25578c7b" />
-
-6. Set group to `project-team`, permissions to `775`
-
-<img width="1040" height="1058" alt="image" src="https://github.com/user-attachments/assets/38702595-aad1-4296-8361-15ba7be151e3" />
-
-8. Test by creating file as `nairobi`
-
-<img width="1040" height="1058" alt="image" src="https://github.com/user-attachments/assets/12a0ebf0-6470-4306-aab2-2cc24f3fd65e" />
+5. Set group to `project-team`, permissions to `775`
+6. Test by creating file as `nairobi`
