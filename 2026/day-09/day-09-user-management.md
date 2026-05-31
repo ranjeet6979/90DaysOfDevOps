@@ -53,7 +53,7 @@ Assign users:
 
 **Verify:** Check permissions and test file creation
 
-<img width="500" height="696" alt="Screenshot 2026-05-31 at 6 00 25 PM" src="https://github.com/user-attachments/assets/d587a50e-0493-45bc-888a-6714f031ff38" />
+<img width="500" height="696" alt="Screenshot 2026-05-31 at 6 00 25 PM" src="https://github.com/user-attachments/assets/eb7768ed-8ecd-4be7-a455-8fb230b8814f" />
 
 ---
 
@@ -63,5 +63,13 @@ Assign users:
 2. Create group `project-team`
 3. Add `nairobi` and `tokyo` to `project-team`
 4. Create `/opt/team-workspace` directory
+   
+<img width="537" height="277" alt="Screenshot 2026-05-31 at 7 35 41 PM" src="https://github.com/user-attachments/assets/e377d3d4-7ba4-48fe-aad9-224ca8c8022b" />
+
 5. Set group to `project-team`, permissions to `775`
+   
+<img width="603" height="130" alt="Screenshot 2026-05-31 at 6 26 31 PM" src="https://github.com/user-attachments/assets/e70ec0e6-7ddd-4eb6-b01b-a3dd73bbbfbe" />
+
 6. Test by creating file as `nairobi`
+ <img width="525" height="257" alt="Screenshot 2026-05-31 at 6 27 08 PM" src="https://github.com/user-attachments/assets/1144eb74-3508-4753-a29c-f9370871a6c8" />
+  
