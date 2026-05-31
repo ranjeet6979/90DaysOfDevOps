@@ -40,7 +40,7 @@ Assign users:
 
 **Verify:** Use appropriate command to check group membership
 
-<img width="478" height="111" alt="Screenshot 2026-05-31 at 5 51 18 PM" src="https://github.com/user-attachments/assets/6dec159f-6baf-41b7-a3ce-9da910d036af" />
+<img width="478" height="111" alt="Screenshot 2026-05-31 at 5 51 18 PM" src="https://github.com/user-attachments/assets/a8260811-d61f-47f6-9a7a-fd8538774ea2" />
 
 ---
 
