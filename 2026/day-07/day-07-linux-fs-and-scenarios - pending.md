@@ -80,11 +80,39 @@ Step 4: check journalctl logs
 
 <img width="918" height="105" alt="image" src="https://github.com/user-attachments/assets/732da6a9-0dd3-4dfe-8b21-69b00aae6e67" />
 
-============================================================================
+---
 
-**Scenario 2: High CPU Usage**
+**Scenario 2: High CPU Usage** 
+```
+Your manager reports that the application server is slow.
+You SSH into the server. What commands would you run to identify
+which process is using high CPU?
+```
 
-============================================================================
+**Hint:**
+- Use a command that shows **live** CPU usage
+
+<img width="655" height="488" alt="image" src="https://github.com/user-attachments/assets/198b43d6-2a4f-4283-9ce6-d56c46da438e" />
+
+- Look for processes sorted by CPU percentage (shortcut P)
+
+<img width="664" height="493" alt="image" src="https://github.com/user-attachments/assets/de742f67-e44b-4295-9f22-451e7b9a0348" />
+
+- Note the PID (Process ID) of the top process
+PID 2707 of highest CPU usage process
+
+- htop output:
+<img width="660" height="494" alt="image" src="https://github.com/user-attachments/assets/bd52f83e-ddb6-4c4c-9895-7b74248de2ad" />
+
+
+**Commands to explore:** `top` (press 'q' to quit), `htop`, `ps aux --sort=-%cpu | head -10`
+
+<img width="934" height="260" alt="image" src="https://github.com/user-attachments/assets/6069c88f-5a20-4267-ad59-daff2326407d" />
+
+**Resource:** Review Day 05 (Troubleshooting Drill - CPU & Memory section)
+
+---
+
 
 **Scenario 3: Finding Service Logs**
 
