@@ -138,4 +138,49 @@ Command: ./backup.sh
 
 <img width="258" height="46" alt="image" src="https://github.com/user-attachments/assets/702014e2-4f0a-4992-870c-fe61af94ab20" />
 
+**Scenario 4: File Permissions Issue** 
+```
+A script at /home/user/backup.sh is not executing.
+When you run it: ./backup.sh
+You get: "Permission denied"
+
+<img width="315" height="37" alt="image" src="https://github.com/user-attachments/assets/536755b0-1d85-4dcf-a545-5c500641898f" />
+
+What commands would you use to fix this?
+```
+
+**Hint:**
+- First: Check what permissions the file has
+- Understand: Files need 'x' (execute) permission to run
+- Fix: Add execute permission with chmod
+
+**Step-by-step solution structure:**
+```
+Step 1: Check current permissions
+Command: ls -l /home/user/backup.sh
+
+<img width="474" height="111" alt="image" src="https://github.com/user-attachments/assets/76a25e3e-c276-4450-941d-6e8182c2f351" />
+
+Look for: -rw-r--r-- (notice no 'x' = not executable)
+
+Step 2: Add execute permission
+Command: chmod +x /home/user/backup.sh
+
+<img width="380" height="23" alt="image" src="https://github.com/user-attachments/assets/13b468de-6f65-4a6b-97dd-b40000e60eb5" />
+
+Step 3: Verify it worked
+Command: ls -l /home/user/backup.sh
+
+<img width="452" height="37" alt="image" src="https://github.com/user-attachments/assets/d4cc7be1-43c8-4f0f-a835-abc948f1c174" />
+
+Look for: -rwxr-xr-x (notice 'x' = executable)
+
+Step 4: Try running it
+Command: ./backup.sh
+
+<img width="339" height="61" alt="image" src="https://github.com/user-attachments/assets/9d62c21d-80a3-4917-8018-ea528b95debc" />
+
+
+```
+
 
