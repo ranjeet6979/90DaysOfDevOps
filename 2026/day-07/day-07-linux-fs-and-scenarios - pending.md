@@ -155,7 +155,7 @@ What commands would you use to fix this?
 - Fix: Add execute permission with chmod
 
 **Step-by-step solution structure:**
-```
+
 Step 1: Check current permissions
 Command: ls -l /home/user/backup.sh
 
@@ -179,8 +179,5 @@ Step 4: Try running it
 Command: ./backup.sh
 
 <img width="339" height="61" alt="image" src="https://github.com/user-attachments/assets/9d62c21d-80a3-4917-8018-ea528b95debc" />
-
-
-```
 
 
