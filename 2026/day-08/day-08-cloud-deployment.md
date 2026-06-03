@@ -40,9 +40,11 @@ By the end of today, you should have:
 
 **Step 1: Create a Cloud Instance**
 
+<img width="1156" height="479" alt="image" src="https://github.com/user-attachments/assets/74397a11-ce46-450f-a45a-f5867719eb38" />
 
 **Step 2: Connect via SSH**
 
+<img width="847" height="635" alt="image" src="https://github.com/user-attachments/assets/4a271373-c3ac-4a03-b83f-ea36d0910f78" />
 
 ---
 
@@ -50,10 +52,16 @@ By the end of today, you should have:
 
 **Step 1: Update System**
 
+<img width="1342" height="292" alt="image" src="https://github.com/user-attachments/assets/684131f2-cd1e-4af2-bc9d-7a1bee373c33" />
 
 **Step 3: Install Nginx**
 
+<img width="1332" height="691" alt="image" src="https://github.com/user-attachments/assets/7b6568f8-100f-443a-baa2-731a522f1279" />
+
+
 **Verify Nginx is running:**
+
+<img width="1030" height="295" alt="image" src="https://github.com/user-attachments/assets/5812e38e-c89e-45f6-be78-967159bcf153" />
 
 ---
 
@@ -66,19 +74,28 @@ You should see the **Nginx welcome page**!
 
 📸 **Screenshot this page** - you'll need it for submission
 
+<img width="955" height="262" alt="image" src="https://github.com/user-attachments/assets/bccc7206-c6da-4089-ac84-c445f11f2a0e" />
+
 ---
 
 ### Part 4: Extract Nginx Logs (15 minutes)
 
 **Step 1: View Nginx Logs**
+access.log
+
+<img width="1343" height="210" alt="image" src="https://github.com/user-attachments/assets/fd1d10f2-177f-45a2-9221-b2783c2257c9" />
 
 **Step 2: Save Logs to File**
+
+<img width="585" height="53" alt="image" src="https://github.com/user-attachments/assets/7bf75d01-1afa-4ba4-b81e-51d6f33b6ce7" />
 
 **Step 3: Download Log File to Your Local Machine**
 ```bash
 # On your local machine (new terminal window)
 # For AWS:
 scp -i your-key.pem ubuntu@<your-instance-ip>:~/nginx-logs.txt .
+
+<img width="935" height="137" alt="image" src="https://github.com/user-attachments/assets/953a17c7-16a1-447b-8939-ae33ca689ef5" />
 
 # For Utho:
 scp root@<your-instance-ip>:~/nginx-logs.txt .
@@ -92,13 +109,14 @@ scp root@<your-instance-ip>:~/nginx-logs.txt .
 Create your `day-08-cloud-deployment.md` with this structure:
 
 ## Commands Used
-[List the key commands you used]
+scp -i key.pem dest_user@dest_ip:/dest_path local path
+ssh -i key.pem dest_user@dest_ip
 
 ## Challenges Faced
-[Describe any issues and how you solved them]
+No
 
 ## What I Learned
-[3-5 bullet points of key learnings]
+
 
 ---
 
