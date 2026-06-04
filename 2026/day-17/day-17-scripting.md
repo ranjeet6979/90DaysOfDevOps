@@ -22,8 +22,13 @@ You will:
 ### Task 1: For Loop
 1. Create `for_loop.sh` that:
    - Loops through a list of 5 fruits and prints each one
+     <img width="479" height="284" alt="image" src="https://github.com/user-attachments/assets/62f817bc-c181-4428-8a8e-28abbfdf26b4" />
+
 2. Create `count.sh` that:
    - Prints numbers 1 to 10 using a for loop
+     <img width="382" height="61" alt="image" src="https://github.com/user-attachments/assets/edc2ac49-0274-4115-9a7d-56021d599ddd" />
+
+     <img width="328" height="291" alt="image" src="https://github.com/user-attachments/assets/00533a52-c904-4312-83c7-db575f16d53b" />
 
 ---
 
@@ -33,6 +38,8 @@ You will:
    - Counts down to 0 using a while loop
    - Prints "Done!" at the end
 
+     <img width="257" height="245" alt="image" src="https://github.com/user-attachments/assets/1da1bdca-a4ac-412c-8ddd-2ac551a3a6ab" />
+
 ---
 
 ### Task 3: Command-Line Arguments
@@ -41,10 +48,15 @@ You will:
    - Prints `Hello, <name>!`
    - If no argument is passed, prints "Usage: ./greet.sh <name>"
 
+     <img width="245" height="204" alt="image" src="https://github.com/user-attachments/assets/32e82a23-fd4d-45ff-ba4c-661fd0ae0edf" />
+
+
 2. Create `args_demo.sh` that:
    - Prints total number of arguments (`$#`)
    - Prints all arguments (`$@`)
    - Prints the script name (`$0`)
+
+     <img width="367" height="176" alt="image" src="https://github.com/user-attachments/assets/69eb8a16-5b86-4eaa-bdc0-c6df9e94f0e0" />
 
 ---
 
