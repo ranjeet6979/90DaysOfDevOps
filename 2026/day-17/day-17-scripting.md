@@ -27,7 +27,8 @@ You will:
 
 2. Create `count.sh` that:
    - Prints numbers 1 to 10 using a for loop
-     
+
+   
      <img width="382" height="61" alt="image" src="https://github.com/user-attachments/assets/edc2ac49-0274-4115-9a7d-56021d599ddd" />
 
 
