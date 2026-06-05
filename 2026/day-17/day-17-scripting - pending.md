@@ -71,6 +71,10 @@ You will:
    - Checks if each package is installed (use `dpkg -s` or `rpm -q`)
    - Installs it if missing, skips if already present
    - Prints status for each package
+  
+     <img width="653" height="420" alt="image" src="https://github.com/user-attachments/assets/29ef97f8-88d7-418b-8f61-494fefe4f6fd" />
+
+      <img width="544" height="217" alt="image" src="https://github.com/user-attachments/assets/089e86e0-ee32-400f-9add-f0e66cbe60f7" />
 
 > Run as root: `sudo -i` or `sudo su`
 
@@ -83,6 +87,8 @@ You will:
    - Tries to navigate into it
    - Creates a file inside
    - Uses `||` operator to print an error if any step fails
+
+   <img width="426" height="146" alt="image" src="https://github.com/user-attachments/assets/affa2876-a191-47da-94f5-89130a36ec07" />
 
 Example:
 ```bash
@@ -99,6 +105,9 @@ mkdir /tmp/devops-test || echo "Directory already exists"
 - Arguments: `$1` first arg, `$#` count, `$@` all args
 - Check root: `if [ "$EUID" -ne 0 ]; then echo "Run as root"; exit 1; fi`
 - Check package: `dpkg -s <pkg> &> /dev/null && echo "installed"`
+
+<img width="430" height="147" alt="image" src="https://github.com/user-attachments/assets/84b9322d-6536-4d2e-81cc-741d7610e367" />
+
 
 ---
 
