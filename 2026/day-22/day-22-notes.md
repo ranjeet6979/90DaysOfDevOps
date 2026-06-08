@@ -22,16 +22,35 @@ You will:
 
 ### Task 1: Install and Configure Git
 1. Verify Git is installed on your machine
-2. Set up your Git identity — name and email
-3. Verify your configuration
+   
+   <img width="267" height="49" alt="image" src="https://github.com/user-attachments/assets/7db9152a-6476-4ffd-859c-d7851194422a" />
+
+3. Set up your Git identity — name and email
+
+   <img width="818" height="140" alt="image" src="https://github.com/user-attachments/assets/ddc47f42-b3ca-4ecc-b406-d41c73e51066" />
+
+
+   
+5. Verify your configuration
 
 ---
 
 ### Task 2: Create Your Git Project
 1. Create a new folder called `devops-git-practice`
 2. Initialize it as a Git repository
+
+   <img width="733" height="110" alt="image" src="https://github.com/user-attachments/assets/fbee2369-cc89-4296-b436-2bf9464a3b77" />
+
 3. Check the status — read and understand what Git is telling you
+
+   tell it is pointing to master branch, no commits done yet and no files in staging area.
+
+   <img width="525" height="106" alt="image" src="https://github.com/user-attachments/assets/d70e4ad7-6512-49ed-be3f-313de3038028" />
+
+   
 4. Explore the hidden `.git/` directory — look at what's inside
+
+<img width="534" height="298" alt="image" src="https://github.com/user-attachments/assets/5fa9e010-b5e0-4c49-a6f6-5a48069ae9e9" />
 
 ---
 
