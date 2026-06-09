@@ -88,9 +88,11 @@ You will:
 ### Task 6: Understand the Git Workflow
 Answer these questions in your own words (add them to a `day-22-notes.md` file):
 1. What is the difference between `git add` and `git commit`?
+   
    git add: Copies changes from your working directory into the staging area.
    git commit: Permanently saves those staged changes into your local repository history.
 2. What does the **staging area** do? Why doesn't Git just commit directly?
+   
    acts as buffer layer before commiting changes to git repo. Only specific changes can be staged (staged can be multiple time). Once all required changes are staged one or multiple commits can be done to ensure each commits has only required changes.
 3. What information does `git log` show you
    
@@ -101,9 +103,11 @@ Answer these questions in your own words (add them to a `day-22-notes.md` file):
    Date and Time about for each commit with commit message.
 
 4. What is the `.git/` folder and what happens if you delete it?
+   
    The .git folder is a hidden directory that stores all version control information for a Git repository, and deleting it will remove the repository’s history and version tracking.
 
 5. What is the difference between a **working directory**, **staging area**, and **repository**?
+   
    In Git, In working directory we edit files, the staging area is a stage before commit stage, and the repository has complete history of the project.
 ---
 
