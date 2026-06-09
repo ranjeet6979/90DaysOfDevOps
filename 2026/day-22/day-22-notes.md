@@ -81,16 +81,30 @@ You will:
 4. Repeat this process at least **3 times** so you have multiple commits in your history
 5. View the full history in a compact format
 
+   <img width="533" height="128" alt="image" src="https://github.com/user-attachments/assets/7b1cf6ea-f211-434a-a27a-5f531d13bbe2" />
+
 ---
 
 ### Task 6: Understand the Git Workflow
 Answer these questions in your own words (add them to a `day-22-notes.md` file):
 1. What is the difference between `git add` and `git commit`?
+   git add: Copies changes from your working directory into the staging area.
+   git commit: Permanently saves those staged changes into your local repository history.
 2. What does the **staging area** do? Why doesn't Git just commit directly?
-3. What information does `git log` show you?
-4. What is the `.git/` folder and what happens if you delete it?
-5. What is the difference between a **working directory**, **staging area**, and **repository**?
+   acts as buffer layer before commiting changes to git repo. Only specific changes can be staged (staged can be multiple time). Once all required changes are staged one or multiple commits can be done to ensure each commits has only required changes.
+3. What information does `git log` show you
+   
+   <img width="469" height="513" alt="image" src="https://github.com/user-attachments/assets/a0fdf887-550b-4212-a97d-8b42642bd2e9" />
 
+   Commit ID: Show commit ID or hash for each commit
+   Author: shows git username and email ID configured at system level.
+   Date and Time about for each commit with commit message.
+
+4. What is the `.git/` folder and what happens if you delete it?
+   The .git folder is a hidden directory that stores all version control information for a Git repository, and deleting it will remove the repository’s history and version tracking.
+
+5. What is the difference between a **working directory**, **staging area**, and **repository**?
+   In Git, In working directory we edit files, the staging area is a stage before commit stage, and the repository has complete history of the project.
 ---
 
 ## Ongoing Task
