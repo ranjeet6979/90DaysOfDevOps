@@ -92,14 +92,35 @@ Follow these rules while creating your runbook:
 - Keep it concise and actionable (aim for ~1 page).
 
 Suggested structure for `linux-troubleshooting-runbook.md`:
-- Target service / process
+- Target service / process: ssh
 - Snapshot: CPU & Memory
+
+  <img width="1360" height="89" alt="image" src="https://github.com/user-attachments/assets/5837cfe9-5635-4fb3-9d5b-30b05112b2b8" />
+
+  <img width="636" height="435" alt="image" src="https://github.com/user-attachments/assets/ce258323-c532-4f07-a13b-6f3aaa8791fa" />
+
+
 - Snapshot: Disk & IO
+
+  <img width="668" height="180" alt="image" src="https://github.com/user-attachments/assets/49cc2d82-0bdd-44bd-874b-f729b9ad9c55" />
+
+  <img width="600" height="62" alt="image" src="https://github.com/user-attachments/assets/72b4cc94-8713-4822-9ccf-0386d90adfd5" />
+
+
 - Snapshot: Network
-- Logs reviewed
+  
+  <img width="581" height="134" alt="image" src="https://github.com/user-attachments/assets/77ded56b-0737-4699-a8d5-e3bec4df0b84" />
+
+- Logs reviewed: /var/log/auth.log
+
+  <img width="1336" height="698" alt="image" src="https://github.com/user-attachments/assets/70ff19c1-292f-4663-9caa-255a199fe18f" />
+
 - Quick findings
 - If this worsens (next steps)
 
+  Check downtime of the server and plan for restart of the service.
+  Based on errors in logs, troubleshoot the issue further.
+  
 ---
 
 ## Resources
