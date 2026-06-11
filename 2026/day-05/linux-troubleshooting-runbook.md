@@ -41,8 +41,32 @@ Follow these rules while creating your runbook:
     
     <img width="677" height="78" alt="image" src="https://github.com/user-attachments/assets/3214f538-46cb-4160-a55a-6c96d50e0ed5" />
 
-  - **CPU / Memory (2):** `top`/`htop`/`ps -o pid,pcpu,pmem,comm -p <pid>`, `free -h`, `vm_stat` (mac)  
-  - **Disk / IO (2):** `df -h`, `du -sh /var/log`, `iostat`/`vmstat`/`dstat`  
+  - **CPU / Memory (2):** `top`/`htop`/`ps -o pid,pcpu,pmem,comm -p <pid>`, `free -h`, `vm_stat` (mac)
+    
+    <img width="711" height="694" alt="image" src="https://github.com/user-attachments/assets/3f783f9a-1d10-4f4f-9be0-bcde33f957d6" />
+
+    <img width="1173" height="689" alt="image" src="https://github.com/user-attachments/assets/6756ae38-d3f3-4914-adb7-f22bc012c491" />
+
+    <img width="366" height="83" alt="image" src="https://github.com/user-attachments/assets/c300eda3-2a70-476e-8e30-ac8c34acfdfe" />
+
+    <img width="431" height="64" alt="image" src="https://github.com/user-attachments/assets/4458562f-5016-4cc2-8b76-16e4f7e2f98d" />
+
+
+
+  - **Disk / IO (2):** `df -h`, `du -sh /var/log`, `iostat`/`vmstat`/`dstat`
+
+    <img width="585" height="214" alt="image" src="https://github.com/user-attachments/assets/44f6994b-852f-44da-afb0-8755d60b05cc" />
+
+    <img width="355" height="356" alt="image" src="https://github.com/user-attachments/assets/4cce7a1e-49b5-4c0c-95ec-82f7300184c4" />
+
+    <img width="670" height="172" alt="image" src="https://github.com/user-attachments/assets/08b2c116-d36f-4ebc-87d3-69c460325847" />
+
+    <img width="598" height="64" alt="image" src="https://github.com/user-attachments/assets/92639621-20f1-48cf-b5dd-436ff666dba4" />
+
+    
+
+
+
   - **Network (2):** `ss -tulpn`/`netstat -tulpn`, `curl -I <service-endpoint>`/`ping`  
   - **Logs (2):** `journalctl -u <service> -n 50`, `tail -n 50 /var/log/<file>.log`
 - Choose **one target service/process** (e.g., `ssh`, `cron`, `docker`, your web app) and stick to it for the drill.
