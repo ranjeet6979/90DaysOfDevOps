@@ -67,9 +67,26 @@ Follow these rules while creating your runbook:
 
 
 
-  - **Network (2):** `ss -tulpn`/`netstat -tulpn`, `curl -I <service-endpoint>`/`ping`  
+  - **Network (2):** `ss -tulpn`/`netstat -tulpn`, `curl -I <service-endpoint>`/`ping`
+
+    <img width="1254" height="157" alt="image" src="https://github.com/user-attachments/assets/9169de9b-b067-40c1-9d9d-09d9bc442ead" />
+
+    <img width="709" height="173" alt="image" src="https://github.com/user-attachments/assets/ed5b201d-2038-4f31-91c0-911c05a1eb95" />
+
+    <img width="1346" height="232" alt="image" src="https://github.com/user-attachments/assets/46e37066-2058-4102-bf0a-535cbd49f9b4" />
+
+    <img width="446" height="146" alt="image" src="https://github.com/user-attachments/assets/3eeeb755-207a-4cbe-9a54-c6b7f1e7bfc5" />
+
+
+
   - **Logs (2):** `journalctl -u <service> -n 50`, `tail -n 50 /var/log/<file>.log`
 - Choose **one target service/process** (e.g., `ssh`, `cron`, `docker`, your web app) and stick to it for the drill.
+
+  <img width="1360" height="383" alt="image" src="https://github.com/user-attachments/assets/214349ae-cf01-43fa-993e-6661af381034" />
+
+  <img width="1353" height="681" alt="image" src="https://github.com/user-attachments/assets/c0ccfd5f-a699-491d-9655-49cef5b5a52f" />
+
+
 - For each command, add a 1–2 line note on what you observed (e.g., “CPU spikes to 80% when restarting”, “No recent errors in last 50 lines”).
 - End with a **“If this worsens”** section listing 3 next steps you would take (ex: restart strategy, increase log verbosity, collect `strace`).
 - Keep it concise and actionable (aim for ~1 page).
