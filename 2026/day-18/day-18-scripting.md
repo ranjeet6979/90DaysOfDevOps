@@ -26,6 +26,7 @@ You will:
    - Call both functions from the script
   
      <img width="371" height="246" alt="image" src="https://github.com/user-attachments/assets/84cc9435-e687-48e1-a6c5-cc4a11534e9c" />
+     
 
      <img width="298" height="74" alt="image" src="https://github.com/user-attachments/assets/55539e18-2b2f-4e0a-ba3d-8cc38dd6a7d1" />
 
