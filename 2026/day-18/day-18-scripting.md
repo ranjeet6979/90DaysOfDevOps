@@ -26,8 +26,7 @@ You will:
    - Call both functions from the script
   
      <img width="371" height="246" alt="image" src="https://github.com/user-attachments/assets/84cc9435-e687-48e1-a6c5-cc4a11534e9c" />
-     
-
+     <br>
      <img width="298" height="74" alt="image" src="https://github.com/user-attachments/assets/55539e18-2b2f-4e0a-ba3d-8cc38dd6a7d1" />
 
 ---
@@ -37,6 +36,11 @@ You will:
    - A function `check_disk` that checks disk usage of `/` using `df -h`
    - A function `check_memory` that checks free memory using `free -h`
    - A main section that calls both and prints the results
+  
+     <img width="375" height="286" alt="image" src="https://github.com/user-attachments/assets/e1b3f558-0641-4761-b591-5c2e717b52d0" />
+      <br>
+     <img width="572" height="201" alt="image" src="https://github.com/user-attachments/assets/a1cb9eaf-9066-4253-a5c8-f21260571afa" />
+
 
 ---
 
