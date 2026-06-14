@@ -140,8 +140,14 @@ Result: No data is lost. The container retains its default files (e.g., Nginx's 
    <br><img width="1030" height="78" alt="image" src="https://github.com/user-attachments/assets/6c8d200b-da2b-478b-b5bf-e675b9c19409" />
 3. Run a **database container** (MySQL/Postgres) on that network with a volume for data
    <br><img width="521" height="40" alt="image" src="https://github.com/user-attachments/assets/83f41f25-a6d2-437b-a252-3e45a71f9b72" />
+   <br><img width="967" height="34" alt="image" src="https://github.com/user-attachments/assets/885bfa31-1d87-4d77-8f56-ca9d553883a0" />
+   <br><img width="697" height="712" alt="image" src="https://github.com/user-attachments/assets/e976d3c2-c44e-4f98-b9c4-8959e31443d4" />
+   <br><img width="1041" height="280" alt="image" src="https://github.com/user-attachments/assets/b2084f62-2fa2-486e-99f9-6ed2c331e67c" />
    
 7. Verify the app container can reach the database by container name
+   <br> yes verified as per above image, it can reach by ping
+   <br> one more observation, DB port 3306 is not exposed outside still other container can reach MySQL DB on port 3306
+   <br><img width="875" height="138" alt="image" src="https://github.com/user-attachments/assets/3267c1e0-a46b-4194-bdd0-9029dea71beb" />
 
 ---
 
