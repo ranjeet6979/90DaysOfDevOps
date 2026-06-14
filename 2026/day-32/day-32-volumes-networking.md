@@ -108,6 +108,10 @@ When mounting storage to a Docker container, how Docker handles existing files i
    <br><img width="636" height="72" alt="image" src="https://github.com/user-attachments/assets/cbcfef36-978a-44df-b912-97fcab6253e0" />
    <br>Ping doesn't work with container name when on default bridge network. It works only with IP address
    <br><img width="513" height="278" alt="image" src="https://github.com/user-attachments/assets/2066f93d-3c79-4e3b-9d64-8dca6c3e0e58" />
+   <br>Additional observation, they can ping each other if on same bridged network also they can ping host machine IP and www.google.com i.e. internet.
+   <br><img width="500" height="35" alt="image" src="https://github.com/user-attachments/assets/514d1e94-0445-4319-8bf7-7f274c56c5c0" />
+   <br><img width="492" height="107" alt="image" src="https://github.com/user-attachments/assets/f4860cfc-54c6-4fda-898b-dac7c22ab34f" />
+   <br><img width="462" height="134" alt="image" src="https://github.com/user-attachments/assets/38483999-c5a3-443e-bde5-78fca756debf" />
 
 7. Run two containers on the default bridge — can they ping each other by **IP**?
 
