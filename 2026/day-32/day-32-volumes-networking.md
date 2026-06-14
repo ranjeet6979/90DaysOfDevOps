@@ -37,10 +37,21 @@ Write what happened and why.
 
 ### Task 2: Named Volumes
 1. Create a named volume
-2. Run the same database container, but this time **attach the volume** to it
-3. Add some data, stop and remove the container
-4. Run a brand new container with the **same volume**
-5. Is the data still there?
+   <br><img width="550" height="36" alt="image" src="https://github.com/user-attachments/assets/0203651e-0df6-44fd-af43-5c78ac58a666" />
+   <br><img width="531" height="101" alt="image" src="https://github.com/user-attachments/assets/3505bed5-415e-4ab1-ab72-6d8991a13ec1" />
+   <br><img width="561" height="183" alt="image" src="https://github.com/user-attachments/assets/d901a878-f835-4060-9913-5b0a2fe9ffe4" />
+   <br>
+3. Run the same database container, but this time **attach the volume** to it
+   <br><img width="1011" height="297" alt="image" src="https://github.com/user-attachments/assets/8b3e4f9e-23ed-4644-aa19-416a6723f3c8" /><br>
+5. Add some data, stop and remove the container
+   <br><img width="875" height="269" alt="image" src="https://github.com/user-attachments/assets/757db6c9-ef07-44e9-afeb-1a3dd1fa76f7" /><br><img width="1067" height="108" alt="image" src="https://github.com/user-attachments/assets/b1b553c1-c29e-46f8-8950-a37f52d3698a" /><br>
+
+7. Run a brand new container with the **same volume**
+   <img width="1009" height="296" alt="image" src="https://github.com/user-attachments/assets/f3639952-8884-420d-b317-3b473d310bf1" />
+
+
+9. Is the data still there?
+   Yes data exist as docker volume of host machine was attached to the container while creating and same volume was attached again while creating new container. 
 
 **Verify:** `docker volume ls`, `docker volume inspect`
 
