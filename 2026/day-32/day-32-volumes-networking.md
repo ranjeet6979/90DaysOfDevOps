@@ -51,7 +51,7 @@ Write what happened and why.
 
 
 9. Is the data still there?
-   Yes data exist as docker volume of host machine was attached to the container while creating and same volume was attached again while creating new container. 
+   <br>Yes data exist as docker volume of host machine was attached to the container while creating and same volume was attached again while creating new container. 
 
 **Verify:** `docker volume ls`, `docker volume inspect`
 
@@ -59,19 +59,57 @@ Write what happened and why.
 
 ### Task 3: Bind Mounts
 1. Create a folder on your host machine with an `index.html` file
-2. Run an Nginx container and **bind mount** your folder to the Nginx web directory
-3. Access the page in your browser
-4. Edit the `index.html` on your host — refresh the browser
+   <br><img width="475" height="55" alt="image" src="https://github.com/user-attachments/assets/2ad5ac91-6c68-42c3-9d94-10b90e42b004" />
+
+3. Run an Nginx container and **bind mount** your folder to the Nginx web directory
+   <br><img width="980" height="83" alt="image" src="https://github.com/user-attachments/assets/a9721d61-06b0-45ab-8d25-65c9da580d38" />
+
+5. Access the page in your browser
+   <br><img width="1175" height="329" alt="image" src="https://github.com/user-attachments/assets/8a7a5c37-560d-4d3b-b239-8eafa9038e8b" />
+
+7. Edit the `index.html` on your host — refresh the browser
+   <br><img width="1016" height="102" alt="image" src="https://github.com/user-attachments/assets/dddb0acd-dffc-4181-b336-013059b60573" />
+   <br><img width="1193" height="345" alt="image" src="https://github.com/user-attachments/assets/d1289029-dd2d-451f-93a8-0cf9319acf6f" />
 
 Write in your notes: What is the difference between a named volume and a bind mount?
+# Docker: Named Volumes vs. Bind Mounts
+
+## 1. Management
+* **Named Volume:** Managed entirely by Docker. Files live in Docker's internal directory.
+* **Bind Mount:** Managed by you. Links a specific, exact path from your computer.
+
+# Docker: Named Volumes vs. Bind Mounts (Behavior with Existing Files)
+
+When mounting storage to a Docker container, how Docker handles existing files inside the container's target directory depends entirely on whether you use a **Named Volume** or a **Bind Mount**.
+
+## 1. Named Volume (Initialization & Copying)
+* **How it works:** If the named volume is newly created and completely empty, Docker will automatically **copy** all existing files from the container's target directory into your volume on the host.
+* **Result:** No data is lost. The container retains its default files (e.g., Nginx's default splash screen), and they safely populate your volume.
+
+## 2. Bind Mount (Overwriting / Hiding)
+* **How it works:** A bind mount forces a specific path from your host machine onto the container's target directory. Docker **overwrites or hides** the container's internal directory with your host folder.
+* **Result:** If your host folder is empty, the container's directory instantly becomes empty. Any pre-existing files built into the container image are hidden, which can cause services like Nginx to crash if critical files disappear.
+
+---
 
 ---
 
 ### Task 4: Docker Networking Basics
 1. List all Docker networks on your machine
-2. Inspect the default `bridge` network
-3. Run two containers on the default bridge — can they ping each other by **name**?
-4. Run two containers on the default bridge — can they ping each other by **IP**?
+   <br><img width="451" height="75" alt="image" src="https://github.com/user-attachments/assets/ebd0216d-054b-44e1-9b09-49c8f50adef5" />
+
+3. Inspect the default `bridge` network
+   <br><img width="579" height="657" alt="image" src="https://github.com/user-attachments/assets/d7a5ab2c-1502-4c33-8dfc-68f372be0bca" />
+   <br><img width="690" height="357" alt="image" src="https://github.com/user-attachments/assets/41ced28e-7f3e-4996-8ade-47c9a635998c" />
+
+5. Run two containers on the default bridge — can they ping each other by **name**?
+   <br><img width="639" height="199" alt="image" src="https://github.com/user-attachments/assets/b93df2e5-6353-4ce4-977b-525121ef2b84" />
+   <br><img width="695" height="777" alt="image" src="https://github.com/user-attachments/assets/205ce9f5-807c-436d-9235-6b6486f978a7" />
+   <br><img width="636" height="72" alt="image" src="https://github.com/user-attachments/assets/cbcfef36-978a-44df-b912-97fcab6253e0" />
+   <br>Ping doesn't work with container name when on default bridge network. It works only with IP address
+   <br><img width="513" height="278" alt="image" src="https://github.com/user-attachments/assets/2066f93d-3c79-4e3b-9d64-8dca6c3e0e58" />
+
+7. Run two containers on the default bridge — can they ping each other by **IP**?
 
 ---
 
