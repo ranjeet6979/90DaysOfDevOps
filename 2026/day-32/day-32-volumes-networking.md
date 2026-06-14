@@ -135,9 +135,13 @@ Result: No data is lost. The container retains its default files (e.g., Nginx's 
 
 ### Task 6: Put It Together
 1. Create a custom network
-2. Run a **database container** (MySQL/Postgres) on that network with a volume for data
-3. Run an **app container** (use any image) on the same network
-4. Verify the app container can reach the database by container name
+   <br><img width="671" height="123" alt="image" src="https://github.com/user-attachments/assets/03211f6f-3252-4308-8f6c-9bf9d58167c2" />
+5. Run an **app container** (use any image) on the same network
+   <br><img width="1030" height="78" alt="image" src="https://github.com/user-attachments/assets/6c8d200b-da2b-478b-b5bf-e675b9c19409" />
+3. Run a **database container** (MySQL/Postgres) on that network with a volume for data
+   <br><img width="521" height="40" alt="image" src="https://github.com/user-attachments/assets/83f41f25-a6d2-437b-a252-3e45a71f9b72" />
+   
+7. Verify the app container can reach the database by container name
 
 ---
 
