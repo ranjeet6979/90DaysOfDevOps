@@ -71,24 +71,24 @@ Write what happened and why.
    <br><img width="1016" height="102" alt="image" src="https://github.com/user-attachments/assets/dddb0acd-dffc-4181-b336-013059b60573" />
    <br><img width="1193" height="345" alt="image" src="https://github.com/user-attachments/assets/d1289029-dd2d-451f-93a8-0cf9319acf6f" />
 
-Write in your notes: What is the difference between a named volume and a bind mount?
-   <br>Docker: Named Volumes vs. Bind Mounts
+5. Write in your notes: What is the difference between a named volume and a bind mount?
+      <br>Docker: Named Volumes vs. Bind Mounts
 
-   <br>Management
-      <br>Named Volume:** Managed entirely by Docker. Files live in Docker's internal directory.
-      <br>Bind Mount:** Managed by you. Links a specific, exact path from your computer.
+      <br>Management
+         <br>Named Volume:** Managed entirely by Docker. Files live in Docker's internal directory.
+         <br>Bind Mount:** Managed by you. Links a specific, exact path from your computer.
 
-<br>Docker: Named Volumes vs. Bind Mounts (Behavior with Existing Files)
+   <br>Docker: Named Volumes vs. Bind Mounts (Behavior with Existing Files)
 
-   <br>When mounting storage to a Docker container, how Docker handles existing files inside the container's target directory depends entirely on whether you use a **Named Volume** or a **Bind Mount**.
+      <br>When mounting storage to a Docker container, how Docker handles existing files inside the container's target directory depends entirely on whether you use a **Named Volume** or a **Bind Mount**.
 
-   <br>Named Volume (Initialization & Copying)
-   <br>How it works: If the named volume is newly created and completely empty, Docker will automatically **copy** all existing files from the container's target directory into your volume on the host.
+      <br>Named Volume (Initialization & Copying)
+      <br>How it works: If the named volume is newly created and completely empty, Docker will automatically **copy** all existing files from the container's target directory into your volume on the host.
 Result: No data is lost. The container retains its default files (e.g., Nginx's default splash screen), and they safely populate your volume.
 
-   <br>Bind Mount (Overwriting / Hiding)
-   <br>How it works:** A bind mount forces a specific path from your host machine onto the container's target directory. Docker overwrites or hides the container's internal directory with your host folder.
-   <br>Result: If your host folder is empty, the container's directory instantly becomes empty. Any pre-existing files built into the container image are hidden, which can cause services like Nginx to crash if critical files disappear.
+      <br>Bind Mount (Overwriting / Hiding)
+      <br>How it works:** A bind mount forces a specific path from your host machine onto the container's target directory. Docker overwrites or hides the container's internal directory with your host folder.
+      <br>Result: If your host folder is empty, the container's directory instantly becomes empty. Any pre-existing files built into the container image are hidden, which can cause services like Nginx to crash if critical files disappear.
 
 ---
 
