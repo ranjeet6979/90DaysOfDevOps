@@ -53,7 +53,11 @@ You will:
    <img width="344" height="258" alt="image" src="https://github.com/user-attachments/assets/6f652270-0153-43fb-ac0d-3829501822f4" />
 
 4. Try a command that **fails** — what happens with `set -e`?
-5. Try a **piped command** where one part fails — what happens with `set -o pipefail`?
+   <br> <img width="607" height="393" alt="image" src="https://github.com/user-attachments/assets/39d8cf16-895e-4b79-bd27-646ca4306a94" />
+   <br> <img width="541" height="304" alt="image" src="https://github.com/user-attachments/assets/513174d1-6828-47d6-a4fd-9fa780583996" />
+ 
+
+6. Try a **piped command** where one part fails — what happens with `set -o pipefail`?
 
 **Document:** What does each flag do?
 - `set -e` →
