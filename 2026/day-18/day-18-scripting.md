@@ -55,7 +55,9 @@ You will:
 4. Try a command that **fails** — what happens with `set -e`?
    <br> <img width="607" height="393" alt="image" src="https://github.com/user-attachments/assets/39d8cf16-895e-4b79-bd27-646ca4306a94" />
    <br> <img width="541" height="304" alt="image" src="https://github.com/user-attachments/assets/513174d1-6828-47d6-a4fd-9fa780583996" />
- 
+   <br>one more example<br>
+   with set -e <br><img width="416" height="224" alt="image" src="https://github.com/user-attachments/assets/630893fe-21a2-4a33-886f-b5d0cff5cc3f" /><br>
+   without set -e <br><img width="410" height="190" alt="image" src="https://github.com/user-attachments/assets/e8ce0524-d54d-439f-9a8d-8c716f66d511" />
 
 6. Try a **piped command** where one part fails — what happens with `set -o pipefail`?
 
