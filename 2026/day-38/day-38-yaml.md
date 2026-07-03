@@ -121,7 +121,7 @@ tools:
 - Validate online: yamllint.com
 
 
-## 3. What I Learned (3 Key Points)
+## What I Learned (3 Key Points)
 
 1. **Spaces Only, No Tabs:** YAML strictly forbids the use of tabs for indentation. Using even a single tab character will break the configuration parser.
 2. **Strict Block Alignment:** Elements belonging to the same list or block structure must maintain uniform vertical alignment. Inconsistent indentation levels result in immediate structural syntax errors.
