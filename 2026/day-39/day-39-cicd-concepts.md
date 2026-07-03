@@ -23,7 +23,7 @@ Write in your notes:
    <br>if all developers push code to the same repo manually deploying to production, there are possibility of conflict between changes pushed by them also overwrite or removing others change.
    
 2. What does "it works on my machine" mean and why is it a real problem?
-   (br>**"It works on my machine"** means an application runs successfully on a developer's local system because it uses specific software versions, libraries, dependencies, and configurations available there. When the code is moved to another environment, such as testing or production, it may fail or behave unexpectedly if those dependencies or configurations are different.
+   <br>**"It works on my machine"** means an application runs successfully on a developer's local system because it uses specific software versions, libraries, dependencies, and configurations available there. When the code is moved to another environment, such as testing or production, it may fail or behave unexpectedly if those dependencies or configurations are different.
 <br><br>This is a real problem because it can cause deployment failures, bugs, and delays in troubleshooting. Containerization technologies such as Docker help solve this issue by packaging the application with all its dependencies, ensuring consistent behavior across different environments.
 
 3. How many times a day can a team safely deploy manually?
@@ -41,6 +41,22 @@ Research and write short definitions (2-3 lines each):
    
 3. **Continuous Deployment** — how it differs from Delivery, when teams use it
    <br>This involces pushing the code to VCS, build/compile the code, testing pushed code and deploy the code.
+
+#### 1. Continuous Integration (CI)
+* **Definition:** Developers frequently merge code into a central repository multiple times a day. Each merge triggers automated builds and tests to catch bugs and integration conflicts immediately.
+* **Software Example:** Multiple developers work on a ride-sharing app. When a developer pushes code for a new "fare estimator" feature, an automated server instantly builds the app and runs tests to ensure it does not break the existing login or GPS systems.
+* **Simple Analogy:** Every time a baker adds a new ingredient to the mixing bowl, they stir it and taste a spoonful immediately. This catches mistakes (like using salt instead of sugar) before baking.
+
+#### 2. Continuous Delivery
+* **Definition:** This extends CI by automatically building, testing, and preparing code changes for release. The software is always in a deployable state, but actual deployment to live users requires a final manual approval.
+* **Software Example:** A healthcare platform updates its patient portal. The system automatically tests the new code and moves it to a staging environment. The product manager then reviews it and manually clicks "Deploy" during a weekend maintenance window.
+* **Simple Analogy:** The baker bakes the cake, decorates it, and boxes it up on the counter. The cake is 100% ready, but it sits there until the shop manager approves it and hands it to the buyer.
+
+#### 3. Continuous Deployment
+* **Definition:** This removes human intervention entirely from the release pipeline. Every code change that passes all automated testing stages is automatically deployed directly to production and live users within minutes.
+* **Software Example:** Streaming platforms like Netflix use this approach. If a developer fixes a minor UI bug on the video player page, the code passes automated tests and goes live to millions of users worldwide immediately without needing a manager's sign-off.
+* **Simple Analogy:** The bakery uses an automated vending machine. As soon as a cake is baked and wrapped, the machine immediately dispenses it directly to the waiting customer without human intervention.
+
 
 Write one real-world example for each.
 
