@@ -68,15 +68,25 @@ In `server.yaml`, add a `startup_script` field using:
 1. The `|` block style (preserves newlines)
 2. The `>` fold style (folds into one line)
 
+<br> <img width="481" height="475" alt="image" src="https://github.com/user-attachments/assets/2c7d0e0a-235c-46f1-8273-59a9a53add11" />
+
 Write in your notes: When would you use `|` vs `>`?
+<br> | is used in the yaml file when newlines needs to be maintained e.g.scripts
+<br> > is used when newline needs to be replaced with spaces and new line used yaml to improve readability.
 
 ---
 
 ### Task 5: Validate Your YAML
 1. Install `yamllint` or use an online validator
 2. Validate both your YAML files
-3. Intentionally break the indentation — what error do you get?
-4. Fix it and validate again
+3. <br><img width="822" height="524" alt="image" src="https://github.com/user-attachments/assets/2feb1ef5-a56f-40f1-9ec4-d0d30d2badd7" />
+
+4. Intentionally break the indentation — what error do you get?
+   <br><img width="816" height="565" alt="image" src="https://github.com/user-attachments/assets/cfe9b2d5-518b-4f18-ba36-bafeee2fc20e" />
+
+5. Fix it and validate again
+   <br><img width="822" height="524" alt="image" src="https://github.com/user-attachments/assets/d34be565-0e74-4a24-bd5c-7ad90e9b586b" />
+
 
 ---
 
@@ -98,6 +108,8 @@ tools:
 - docker
   - kubernetes
 ```
+<br>No proper indentation for 'docker' in the list.
+<br>Inconsistent indentation: 'docker' and 'kubernetes' are not aligned at the same level.
 
 ---
 
@@ -108,6 +120,12 @@ tools:
 - `true`/`false` are booleans, `"true"` is a string
 - Validate online: yamllint.com
 
+
+## 3. What I Learned (3 Key Points)
+
+1. **Spaces Only, No Tabs:** YAML strictly forbids the use of tabs for indentation. Using even a single tab character will break the configuration parser.
+2. **Strict Block Alignment:** Elements belonging to the same list or block structure must maintain uniform vertical alignment. Inconsistent indentation levels result in immediate structural syntax errors.
+3. **Multi-line Flexibility:** Using `|` and `>` provides powerful built-in formatting control, allowing to easily embed complex scripts or long strings without cluttering the document.
 ---
 
 ## Documentation
