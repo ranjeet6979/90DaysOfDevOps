@@ -1,65 +1,53 @@
-**File System Hierarchy**
-Core Directories:
+# File System Hierarchy
 
-/ (root) - The starting point of everything, contains important directories like home, mnt, etc
+## Part 1: Linux File System Hierarchy
+### Core Directories:
 
-/home - User home directories, personalised directory for the user 
+- / (root) - The starting point of everything, contains important directories like home, mnt, etc
+- /home - User home directories, personalised directory for the user 
+- /root - Root user's home directory
+- /etc - Configuration files like sudoes, fstab , ssh, crontab, dhcp
+- /var/log - Log files e.g auth.log, syslog, 
+- /tmp - Temporary files
 
-/root - Root user's home directory
+### Additional Directories:
 
-/etc - Configuration files like sudoes, fstab , ssh, crontab, dhcp
+- /bin - Essential command binaries (link to /usr/bin)
+- /usr/bin - User command binaries 
+- /opt - Optional/third-party applications
 
-/var/log - Log files e.g auth.log, syslog, 
+# Hands On task
 
-/tmp - Temporary files
+### Find the largest log file in /var/log
 
-Additional Directories:
+<br> du -sh /var/log/* 2>/dev/null | sort -h | tail -5
+<br><img width="583" height="86" alt="image" src="https://github.com/user-attachments/assets/af95b0b3-ce08-4e54-9129-27f6f662fc62" />
 
+### Look at a config file in /etc
 
-/bin - Essential command binaries (link to /usr/bin)
+<br> cat /etc/hostname
+<br><img width="367" height="32" alt="image" src="https://github.com/user-attachments/assets/53b3d4d1-e339-4ba5-8869-380534a83820" />
 
-/usr/bin - User command binaries 
+### Check your home directory
 
-/opt - Optional/third-party applications
+<br>ls -la ~
+<br><img width="386" height="145" alt="image" src="https://github.com/user-attachments/assets/1eb24632-93ec-44fa-9065-764acec9cefc" />
 
-Hands On task
+## Part 2: Scenario-Based Practice
 
-# Find the largest log file in /var/log
+**Question: How do you check if the 'nginx' service is running?**
 
-du -sh /var/log/* 2>/dev/null | sort -h | tail -5
+<br>systemctl status nginx
 
+<br><img width="910" height="271" alt="image" src="https://github.com/user-attachments/assets/7814a329-4541-4f8d-af16-1cf0fc2c01d2" />
 
-<img width="583" height="86" alt="image" src="https://github.com/user-attachments/assets/af95b0b3-ce08-4e54-9129-27f6f662fc62" />
+<br>list all servcies: systemctl list-units --type=service
 
-# Look at a config file in /etc
+<br><img width="1049" height="691" alt="image" src="https://github.com/user-attachments/assets/5e9e5e10-69fb-4018-9705-cb758cafc250" />
 
-cat /etc/hostname
+<br>systemctl is-enabled nginx
 
-<img width="367" height="32" alt="image" src="https://github.com/user-attachments/assets/53b3d4d1-e339-4ba5-8869-380534a83820" />
-
-# Check your home directory
-
-ls -la ~
-
-<img width="386" height="145" alt="image" src="https://github.com/user-attachments/assets/1eb24632-93ec-44fa-9065-764acec9cefc" />
-
-**Part 2: Scenario-Based Practice**
-
-Question: How do you check if the 'nginx' service is running?
-
-systemctl status nginx
-
-<img width="910" height="271" alt="image" src="https://github.com/user-attachments/assets/7814a329-4541-4f8d-af16-1cf0fc2c01d2" />
-
-list all servcies: systemctl list-units --type=service
-
-<img width="1049" height="691" alt="image" src="https://github.com/user-attachments/assets/5e9e5e10-69fb-4018-9705-cb758cafc250" />
-
-systemctl is-enabled nginx
-
-<img width="369" height="49" alt="image" src="https://github.com/user-attachments/assets/e995c4f2-f887-4470-a081-2cd9f3296e04" />
-
-
+<br><img width="369" height="49" alt="image" src="https://github.com/user-attachments/assets/e995c4f2-f887-4470-a081-2cd9f3296e04" />
 
 ============================================================================
 **Scenario 1: Service Not Starting**
