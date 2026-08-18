@@ -8,7 +8,6 @@
 **Verify:** `ls -l` to see permissions
 
 <img width="482" height="332" alt="Screenshot 2026-05-31 at 11 37 39 PM" src="https://github.com/user-attachments/assets/5ba751cc-410d-4494-bbb9-7302d06f4a65" />
----
 
 ### Task 2: Read Files (10 minutes)
 
@@ -27,8 +26,6 @@
 6. Display last 5 lines of `/etc/passwd` using `tail`
 
 <img width="431" height="108" alt="Screenshot 2026-05-31 at 9 01 05 PM" src="https://github.com/user-attachments/assets/b56f43ce-3cec-4a5f-b3e4-bae8567c4947" />
-
----
 
 ### Task 3: Understand Permissions (10 minutes)
 
@@ -61,8 +58,6 @@ A: Current permissions are read write for user ranjeet, read write for group ran
 <img width="450" height="96" alt="image" src="https://github.com/user-attachments/assets/0b5b97d0-a47b-4fb1-9206-2cfba781f5b5" />
 
 **Verify:** `ls -l` after each change
-
----
 
 ### Task 5: Test Permissions (10 minutes)
 
