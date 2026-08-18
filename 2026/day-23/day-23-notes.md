@@ -22,7 +22,7 @@ Answer these in your `day-23-notes.md`:
    A branch in Git is an isolated workspace within a repository that creates a separate timeline of changes. It allows developers to work independently without affecting other branches. Changes can later be merged back into the main branch.
 
 2. Why do we use branches instead of committing everything to `main`?
-   it is isolated workspace within our git repository. it ensures developers can work independently without touching code in mail branch
+   it is isolated workspace within our git repository. it ensures developers can work independently without touching code in main branch
    
 3. What is `HEAD` in Git?
    HEAD points to latest commit in git repo.
