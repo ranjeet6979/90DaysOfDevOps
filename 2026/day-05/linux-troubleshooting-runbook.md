@@ -35,33 +35,33 @@ Follow these rules while creating your runbook:
 - Run and record output for **at least 8 commands** (save snippets in your runbook)  
   - **Environment basics (2):** `uname -a`, `lsb_release -a` (or `cat /etc/os-release`)
     
-    <img width="749" height="339" alt="image" src="https://github.com/user-attachments/assets/0b84fa7b-e06b-4eb1-949e-b130ca22c0f9" />
+    <br><img width="749" height="339" alt="image" src="https://github.com/user-attachments/assets/0b84fa7b-e06b-4eb1-949e-b130ca22c0f9" />
 
   - **Filesystem sanity (2):** create a throwaway folder and file, e.g., `mkdir /tmp/runbook-demo`, `cp /etc/hosts /tmp/runbook-demo/hosts-copy && ls -l /tmp/runbook-demo`
     
-    <img width="677" height="78" alt="image" src="https://github.com/user-attachments/assets/3214f538-46cb-4160-a55a-6c96d50e0ed5" />
+    <br><img width="677" height="78" alt="image" src="https://github.com/user-attachments/assets/3214f538-46cb-4160-a55a-6c96d50e0ed5" />
 
   - **CPU / Memory (2):** `top`/`htop`/`ps -o pid,pcpu,pmem,comm -p <pid>`, `free -h`, `vm_stat` (mac)
     
-    <img width="711" height="694" alt="image" src="https://github.com/user-attachments/assets/3f783f9a-1d10-4f4f-9be0-bcde33f957d6" />
+    <br><img width="711" height="694" alt="image" src="https://github.com/user-attachments/assets/3f783f9a-1d10-4f4f-9be0-bcde33f957d6" />
 
-    <img width="1173" height="689" alt="image" src="https://github.com/user-attachments/assets/6756ae38-d3f3-4914-adb7-f22bc012c491" />
+    <br><img width="1173" height="689" alt="image" src="https://github.com/user-attachments/assets/6756ae38-d3f3-4914-adb7-f22bc012c491" />
 
-    <img width="366" height="83" alt="image" src="https://github.com/user-attachments/assets/c300eda3-2a70-476e-8e30-ac8c34acfdfe" />
+    <br><img width="366" height="83" alt="image" src="https://github.com/user-attachments/assets/c300eda3-2a70-476e-8e30-ac8c34acfdfe" />
 
-    <img width="431" height="64" alt="image" src="https://github.com/user-attachments/assets/4458562f-5016-4cc2-8b76-16e4f7e2f98d" />
+    <br><img width="431" height="64" alt="image" src="https://github.com/user-attachments/assets/4458562f-5016-4cc2-8b76-16e4f7e2f98d" />
 
 
 
   - **Disk / IO (2):** `df -h`, `du -sh /var/log`, `iostat`/`vmstat`/`dstat`
 
-    <img width="585" height="214" alt="image" src="https://github.com/user-attachments/assets/44f6994b-852f-44da-afb0-8755d60b05cc" />
+    <br><img width="585" height="214" alt="image" src="https://github.com/user-attachments/assets/44f6994b-852f-44da-afb0-8755d60b05cc" />
 
-    <img width="355" height="356" alt="image" src="https://github.com/user-attachments/assets/4cce7a1e-49b5-4c0c-95ec-82f7300184c4" />
+    <br><img width="355" height="356" alt="image" src="https://github.com/user-attachments/assets/4cce7a1e-49b5-4c0c-95ec-82f7300184c4" />
 
-    <img width="670" height="172" alt="image" src="https://github.com/user-attachments/assets/08b2c116-d36f-4ebc-87d3-69c460325847" />
+    <br><img width="670" height="172" alt="image" src="https://github.com/user-attachments/assets/08b2c116-d36f-4ebc-87d3-69c460325847" />
 
-    <img width="598" height="64" alt="image" src="https://github.com/user-attachments/assets/92639621-20f1-48cf-b5dd-436ff666dba4" />
+    <br><img width="598" height="64" alt="image" src="https://github.com/user-attachments/assets/92639621-20f1-48cf-b5dd-436ff666dba4" />
 
     
 
@@ -69,22 +69,22 @@ Follow these rules while creating your runbook:
 
   - **Network (2):** `ss -tulpn`/`netstat -tulpn`, `curl -I <service-endpoint>`/`ping`
 
-    <img width="1254" height="157" alt="image" src="https://github.com/user-attachments/assets/9169de9b-b067-40c1-9d9d-09d9bc442ead" />
+    <br><img width="1254" height="157" alt="image" src="https://github.com/user-attachments/assets/9169de9b-b067-40c1-9d9d-09d9bc442ead" />
 
-    <img width="709" height="173" alt="image" src="https://github.com/user-attachments/assets/ed5b201d-2038-4f31-91c0-911c05a1eb95" />
+    <br><img width="709" height="173" alt="image" src="https://github.com/user-attachments/assets/ed5b201d-2038-4f31-91c0-911c05a1eb95" />
 
-    <img width="1346" height="232" alt="image" src="https://github.com/user-attachments/assets/46e37066-2058-4102-bf0a-535cbd49f9b4" />
+    <br><img width="1346" height="232" alt="image" src="https://github.com/user-attachments/assets/46e37066-2058-4102-bf0a-535cbd49f9b4" />
 
-    <img width="446" height="146" alt="image" src="https://github.com/user-attachments/assets/3eeeb755-207a-4cbe-9a54-c6b7f1e7bfc5" />
+    <br><img width="446" height="146" alt="image" src="https://github.com/user-attachments/assets/3eeeb755-207a-4cbe-9a54-c6b7f1e7bfc5" />
 
 
 
   - **Logs (2):** `journalctl -u <service> -n 50`, `tail -n 50 /var/log/<file>.log`
 - Choose **one target service/process** (e.g., `ssh`, `cron`, `docker`, your web app) and stick to it for the drill.
 
-  <img width="1360" height="383" alt="image" src="https://github.com/user-attachments/assets/214349ae-cf01-43fa-993e-6661af381034" />
+  <br><img width="1360" height="383" alt="image" src="https://github.com/user-attachments/assets/214349ae-cf01-43fa-993e-6661af381034" />
 
-  <img width="1353" height="681" alt="image" src="https://github.com/user-attachments/assets/c0ccfd5f-a699-491d-9655-49cef5b5a52f" />
+  <br><img width="1353" height="681" alt="image" src="https://github.com/user-attachments/assets/c0ccfd5f-a699-491d-9655-49cef5b5a52f" />
 
 
 - For each command, add a 1–2 line note on what you observed (e.g., “CPU spikes to 80% when restarting”, “No recent errors in last 50 lines”).
@@ -95,25 +95,25 @@ Suggested structure for `linux-troubleshooting-runbook.md`:
 - Target service / process: ssh
 - Snapshot: CPU & Memory
 
-  <img width="1360" height="89" alt="image" src="https://github.com/user-attachments/assets/5837cfe9-5635-4fb3-9d5b-30b05112b2b8" />
+  <br><img width="1360" height="89" alt="image" src="https://github.com/user-attachments/assets/5837cfe9-5635-4fb3-9d5b-30b05112b2b8" />
 
-  <img width="636" height="435" alt="image" src="https://github.com/user-attachments/assets/ce258323-c532-4f07-a13b-6f3aaa8791fa" />
+  <br><img width="636" height="435" alt="image" src="https://github.com/user-attachments/assets/ce258323-c532-4f07-a13b-6f3aaa8791fa" />
 
 
 - Snapshot: Disk & IO
 
-  <img width="668" height="180" alt="image" src="https://github.com/user-attachments/assets/49cc2d82-0bdd-44bd-874b-f729b9ad9c55" />
+  <br><img width="668" height="180" alt="image" src="https://github.com/user-attachments/assets/49cc2d82-0bdd-44bd-874b-f729b9ad9c55" />
 
-  <img width="600" height="62" alt="image" src="https://github.com/user-attachments/assets/72b4cc94-8713-4822-9ccf-0386d90adfd5" />
+  <br><img width="600" height="62" alt="image" src="https://github.com/user-attachments/assets/72b4cc94-8713-4822-9ccf-0386d90adfd5" />
 
 
 - Snapshot: Network
   
-  <img width="581" height="134" alt="image" src="https://github.com/user-attachments/assets/77ded56b-0737-4699-a8d5-e3bec4df0b84" />
+  <br><img width="581" height="134" alt="image" src="https://github.com/user-attachments/assets/77ded56b-0737-4699-a8d5-e3bec4df0b84" />
 
 - Logs reviewed: /var/log/auth.log
 
-  <img width="1336" height="698" alt="image" src="https://github.com/user-attachments/assets/70ff19c1-292f-4663-9caa-255a199fe18f" />
+  <br><img width="1336" height="698" alt="image" src="https://github.com/user-attachments/assets/70ff19c1-292f-4663-9caa-255a199fe18f" />
 
 - Quick findings
 - If this worsens (next steps)
