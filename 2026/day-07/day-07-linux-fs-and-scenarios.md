@@ -50,6 +50,7 @@
 <br><img width="369" height="49" alt="image" src="https://github.com/user-attachments/assets/e995c4f2-f887-4470-a081-2cd9f3296e04" />
 
 ============================================================================
+
 **Scenario 1: Service Not Starting**
 
 Step 1: check service running stauts:  systemctl status nginx
