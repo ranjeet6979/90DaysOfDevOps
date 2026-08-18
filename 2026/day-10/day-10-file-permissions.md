@@ -12,19 +12,12 @@
 ### Task 2: Read Files (10 minutes)
 
 <br>1. Read `notes.txt` using `cat`
-   
 <br><img width="270" height="40" alt="image" src="https://github.com/user-attachments/assets/1ab6846c-82fc-4f35-a12d-ca789e991dbe" />
-
 <br>2. View `script.sh` in vim read-only mode
-
 <br><img width="671" height="115" alt="image" src="https://github.com/user-attachments/assets/274e2a4b-12c8-40b9-ba1a-639d5bcf5f55" />
-
 <br>4. Display first 5 lines of `/etc/passwd` using `head`
-
 <br><img width="388" height="112" alt="Screenshot 2026-05-31 at 9 00 02 PM" src="https://github.com/user-attachments/assets/1c440db3-13c7-484b-90c3-5a109f463340" />
-  
 <br>6. Display last 5 lines of `/etc/passwd` using `tail`
-
 <br><img width="431" height="108" alt="Screenshot 2026-05-31 at 9 01 05 PM" src="https://github.com/user-attachments/assets/b56f43ce-3cec-4a5f-b3e4-bae8567c4947" />
 
 ### Task 3: Understand Permissions (10 minutes)
