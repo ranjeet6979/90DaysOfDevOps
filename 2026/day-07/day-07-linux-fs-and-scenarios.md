@@ -105,25 +105,25 @@ PID 2707 of highest CPU usage process
 
 **Scenario 3: Finding Service Logs**
 
-# Check service status first
+Check service status first
 
 systemctl status nginx
 
 <img width="912" height="285" alt="image" src="https://github.com/user-attachments/assets/33eafdb6-5d42-4196-aa27-281c3fd7805d" />
 
-# View last 50 lines of logs
+View last 50 lines of logs
 
 journalctl -u nginx -n 50
 
 <img width="909" height="119" alt="image" src="https://github.com/user-attachments/assets/a07e1790-88e7-4431-8cb4-c7a60d7fc636" />
 
-# Follow logs in real-time
+Follow logs in real-time
 
 journalctl -u nginx -f
 
 <img width="915" height="113" alt="image" src="https://github.com/user-attachments/assets/3070a0a6-b723-407a-a109-1039e16bcca3" />
 
-============================================================================
+---
 
 **Scenario 4: File Permissions Issue**
 
@@ -155,7 +155,7 @@ Command: ./backup.sh
 
 <img width="258" height="46" alt="image" src="https://github.com/user-attachments/assets/702014e2-4f0a-4992-870c-fe61af94ab20" />
 
-**Scenario 4: File Permissions Issue** 
+**Scenario 5: File Permissions Issue** 
 ```
 A script at /home/user/backup.sh is not executing.
 When you run it: ./backup.sh
