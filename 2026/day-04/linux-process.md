@@ -1,5 +1,5 @@
 
-#PROCESS COMMANDS:
+# PROCESS COMMANDS:
 top
 
 <img width="755" height="691" alt="image" src="https://github.com/user-attachments/assets/1a622d0d-2578-4723-8625-f76bd50a4e3a" />
@@ -20,7 +20,7 @@ pgrep - search for processes by name and return their process IDs (PIDs)
 <img width="352" height="62" alt="image" src="https://github.com/user-attachments/assets/c98c1601-df96-443c-a40b-8d544747b89d" />
 
 
-#SERVICE COMMANDS:
+# SERVICE COMMANDS:
 systemctl status: systemd controller
 <img width="1344" height="387" alt="image" src="https://github.com/user-attachments/assets/456dc39d-2ac4-4df0-a8a3-04a93b844dd9" />
 
@@ -35,7 +35,7 @@ Devices (.device)
 <img width="1271" height="683" alt="image" src="https://github.com/user-attachments/assets/62430ac8-2802-4917-8109-03036270586c" />
 
 
-#LOG COMMANDS:
+# LOG COMMANDS:
 journalctl -u service
 <img width="1347" height="162" alt="image" src="https://github.com/user-attachments/assets/2a1fb52b-9581-4ce5-9b50-9292188330f4" />
 
