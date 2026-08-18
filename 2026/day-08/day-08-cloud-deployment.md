@@ -54,6 +54,15 @@ By the end of today, you should have:
 
 <img width="1342" height="292" alt="image" src="https://github.com/user-attachments/assets/684131f2-cd1e-4af2-bc9d-7a1bee373c33" />
 
+**Step 2: Install Docker**
+
+```bash
+sudo apt install docker.io -y
+sudo systemctl enable docker --now
+sudo usermod -aG docker $USER
+docker --version
+```
+
 **Step 3: Install Nginx**
 
 <img width="1332" height="691" alt="image" src="https://github.com/user-attachments/assets/7b6568f8-100f-443a-baa2-731a522f1279" />
