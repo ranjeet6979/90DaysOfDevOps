@@ -72,6 +72,9 @@ You will:
 3. Commit with a meaningful message
 4. View your commit history
 
+<br><img width="719" height="513" alt="image" src="https://github.com/user-attachments/assets/9770b257-16ea-4b4e-ad65-2eaa6d9754b6" />
+<br><img width="627" height="319" alt="image" src="https://github.com/user-attachments/assets/73feec3f-c3f2-4262-a830-f7cfc6d28163" />
+
 ---
 
 ### Task 5: Make More Changes and Build History
