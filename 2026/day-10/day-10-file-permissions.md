@@ -39,9 +39,8 @@ Check your files: `ls -l devops.txt notes.txt script.sh`
 
 <img width="460" height="100" alt="image" src="https://github.com/user-attachments/assets/a6cf5dce-2d4a-4f1e-ac76-25960ef545df" />
 
-Answer: What are current permissions? Who can read/write/execute?
-Current permissions are read write for user ranjeet, read write for group ranjeet and only read for others.
----
+Q: What are current permissions? Who can read/write/execute?
+A: Current permissions are read write for user ranjeet, read write for group ranjeet and only read for others.
 
 ### Task 4: Modify Permissions (20 minutes)
 
