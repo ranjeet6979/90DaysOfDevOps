@@ -42,13 +42,13 @@ Follow these rules while creating your runbook:
     <br><img width="677" height="78" alt="image" src="https://github.com/user-attachments/assets/3214f538-46cb-4160-a55a-6c96d50e0ed5" />
 
   - **CPU / Memory (2):** `top`/`htop`/`ps -o pid,pcpu,pmem,comm -p <pid>`, `free -h`, `vm_stat` (mac)
-    
+    <br>top
     <br><img width="711" height="694" alt="image" src="https://github.com/user-attachments/assets/3f783f9a-1d10-4f4f-9be0-bcde33f957d6" />
-
+    <br>htop
     <br><img width="1173" height="689" alt="image" src="https://github.com/user-attachments/assets/6756ae38-d3f3-4914-adb7-f22bc012c491" />
-
+    <br>ps -o pid,pcpu,pmem,comm
     <br><img width="366" height="83" alt="image" src="https://github.com/user-attachments/assets/c300eda3-2a70-476e-8e30-ac8c34acfdfe" />
-
+    <br>ps -o pid,pcpu,pmem,comm -p <pid>`
     <br><img width="431" height="64" alt="image" src="https://github.com/user-attachments/assets/4458562f-5016-4cc2-8b76-16e4f7e2f98d" />
 
 
