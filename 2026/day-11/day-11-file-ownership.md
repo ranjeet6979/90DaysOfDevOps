@@ -33,7 +33,7 @@ Master file and directory ownership in Linux.
 **Format:** `-rw-r--r-- 1 owner group size date filename`
 
 Document: What's the difference between owner and group?
-<br>Owner is one specific user with access to the file, level of access is determined by permissions set at file/ directory level.
+<br>Answer: Owner is one specific user with access to the file, level of access is determined by permissions set at file/ directory level.
 <br>Group is collecotion of users with common access, used when common access needs to be provided to group of users.
 
 ---
@@ -41,7 +41,6 @@ Document: What's the difference between owner and group?
 ### Task 2: Basic chown Operations (20 minutes)
 
 1. Create file `devops-file.txt
- 
 2. Check current owner: `ls -l devops-file.txt`
 <br><img width="501" height="81" alt="image" src="https://github.com/user-attachments/assets/963718ef-e34b-4b96-8a2c-ef9b9dae217d" />
 
@@ -53,6 +52,7 @@ Document: What's the difference between owner and group?
 <br><img width="480" height="57" alt="image" src="https://github.com/user-attachments/assets/fab028f7-b64e-42d8-a2a1-8ad8c0800bea" />
 
 **Try:**
+
 ```bash
 sudo chown tokyo devops-file.txt
 ```
