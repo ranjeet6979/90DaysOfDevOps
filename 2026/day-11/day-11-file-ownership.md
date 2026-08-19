@@ -127,12 +127,16 @@ chown -R professor:planners heist-project/
 
 3. Create directory: `bank-heist/`
 4. Create 3 files inside:  
-   <br>touch bank-heist/access-codes.txt
-   <br>touch bank-heist/blueprints.pdf
-   <br>touch bank-heist/escape-plan.txt
+
+   ```bash
+   touch bank-heist/access-codes.txt
+   touch bank-heist/blueprints.pdf
+   touch bank-heist/escape-plan.txt
+   ```
+
    <br><img width="525" height="204" alt="image" src="https://github.com/user-attachments/assets/269ce253-857c-4149-b59f-5b0e7e28cc03" />
 
-5. Set different ownership:
+6. Set different ownership:
    - `access-codes.txt` → owner: `tokyo`, group: `vault-team`
    - `blueprints.pdf` → owner: `berlin`, group: `tech-team`
    - `escape-plan.txt` → owner: `nairobi`, group: `vault-team`
