@@ -93,7 +93,11 @@ mount /dev/devops-vg/app-data /mnt/app-data
 df -h /mnt/app-data
 ```
 <img width="700" height="591" alt="image" src="https://github.com/user-attachments/assets/e166bb52-e2da-490c-85f1-a1321d913065" />
-<br><img width="645" height="47" alt="image" src="https://github.com/user-attachments/assets/5f24c534-1245-4d70-a5d0-b6b23b4320d9" />
+
+```bash
+lvs
+```
+<img width="645" height="47" alt="image" src="https://github.com/user-attachments/assets/5f24c534-1245-4d70-a5d0-b6b23b4320d9" />
 
 ### Task 6: Extend the Volume
 ```bash
