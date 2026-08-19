@@ -102,20 +102,15 @@ lvs
 ### Task 6: Extend the Volume
 ```bash
 lvextend -L +200M /dev/devops-vg/app-data
-
+```
 <img width="771" height="88" alt="image" src="https://github.com/user-attachments/assets/6d5dad60-e48b-4672-82c3-467db44b9028" />
 
 df -h will still display old size for mount, hence need to run resize2fs
+```bash
 resize2fs /dev/devops-vg/app-data
-
 df -h /mnt/app-data
-
-<img width="716" height="310" alt="image" src="https://github.com/user-attachments/assets/e2f1975e-1b79-4730-a6a4-27098a8e8550" />
-
-
 ```
-
----
+<img width="716" height="310" alt="image" src="https://github.com/user-attachments/assets/e2f1975e-1b79-4730-a6a4-27098a8e8550" />
 
 ## Documentation
 
