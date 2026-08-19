@@ -25,33 +25,32 @@ Master file and directory ownership in Linux.
 <img width="516" height="473" alt="image" src="https://github.com/user-attachments/assets/f147a16a-5f3f-4d86-b50c-59eb293b09a2" />
  
 2. Identify the **owner** and **group** columns
-Owner is ranjeet user and ranjeet group
-4. Check who owns your files
-files are owned by user ranjeet.
+<br>Owner is ranjeet user and ranjeet group
+
+3. Check who owns your files
+<br>files are owned by user ranjeet.
 
 **Format:** `-rw-r--r-- 1 owner group size date filename`
 
 Document: What's the difference between owner and group?
-Owner is one specific user with access to the file, level of access is determined by permissions set at file/ directory level.
-Group is collecotion of users with common access, used when common access needs to be provided to group of users.
+<br>Owner is one specific user with access to the file, level of access is determined by permissions set at file/ directory level.
+<br>Group is collecotion of users with common access, used when common access needs to be provided to group of users.
+
 ---
 
 ### Task 2: Basic chown Operations (20 minutes)
 
-1. Create file `devops-file.txt`
+1. Create file `devops-file.txt
+ 
 2. Check current owner: `ls -l devops-file.txt`
-
-<img width="501" height="81" alt="image" src="https://github.com/user-attachments/assets/963718ef-e34b-4b96-8a2c-ef9b9dae217d" />
+<br><img width="501" height="81" alt="image" src="https://github.com/user-attachments/assets/963718ef-e34b-4b96-8a2c-ef9b9dae217d" />
 
 3. Change owner to `tokyo` (create user if needed)
-
-<img width="493" height="80" alt="image" src="https://github.com/user-attachments/assets/21f0ee19-abff-47ae-a659-437b9a02e22a" />
+<br><img width="493" height="80" alt="image" src="https://github.com/user-attachments/assets/21f0ee19-abff-47ae-a659-437b9a02e22a" />
 
 4. Change owner to `berlin`
 5. Verify the changes
-
-<img width="480" height="57" alt="image" src="https://github.com/user-attachments/assets/fab028f7-b64e-42d8-a2a1-8ad8c0800bea" />
-
+<br><img width="480" height="57" alt="image" src="https://github.com/user-attachments/assets/fab028f7-b64e-42d8-a2a1-8ad8c0800bea" />
 
 **Try:**
 ```bash
