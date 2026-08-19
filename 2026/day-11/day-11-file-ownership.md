@@ -103,14 +103,16 @@ Using `chown` you can change both owner and group together:
 
    <br><img width="333" height="59" alt="image" src="https://github.com/user-attachments/assets/72008003-947d-43a0-802e-c96eb5e4427e" />
 
-4. Change ownership of entire `heist-project/` directory:
+3. Change ownership of entire `heist-project/` directory:
    - Owner: `professor`
    - Group: `planners`
    - Use recursive flag (`-R`)
+  
+```bash
+chown -R professor:planners heist-project/
+``` 
 
-   <br><img width="537" height="118" alt="image" src="https://github.com/user-attachments/assets/e182750a-152d-48f8-95ce-97131a814988" />
-
-5. Verify all files and subdirectories changed: `ls -lR heist-project/`
+4. Verify all files and subdirectories changed: `ls -lR heist-project/`
    <br><img width="533" height="115" alt="image" src="https://github.com/user-attachments/assets/6ce04a9e-1064-4366-afa9-6db122d23cb8" />
 
 ---
