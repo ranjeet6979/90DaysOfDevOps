@@ -37,50 +37,53 @@ losetup -a   # Note the device name (e.g., /dev/loop0)
 ### Task 1: Check Current Storage
 Run: `lsblk`, `pvs`, `vgs`, `lvs`, `df -h`
 
-<img width="471" height="160" alt="image" src="https://github.com/user-attachments/assets/fc3df98c-569a-4063-b2d5-39cc8ef34130" />
+<br><img width="471" height="160" alt="image" src="https://github.com/user-attachments/assets/fc3df98c-569a-4063-b2d5-39cc8ef34130" />
+<br><img width="590" height="271" alt="image" src="https://github.com/user-attachments/assets/d0e74413-2ccd-4039-956c-06a4510548dc" />
 
-<img width="590" height="271" alt="image" src="https://github.com/user-attachments/assets/d0e74413-2ccd-4039-956c-06a4510548dc" />
+lsblk output after attaching device:
 
-**lsblk output after attaching device:**
-
+```bash
 lsblk -o +SERIAL
-<img width="618" height="159" alt="image" src="https://github.com/user-attachments/assets/0986e5ac-63b5-4936-8702-83307ebef3fb" />
+```
+<br><img width="618" height="159" alt="image" src="https://github.com/user-attachments/assets/0986e5ac-63b5-4936-8702-83307ebef3fb" />
 
+```bash
 lsblk -o NAME,SIZE,TYPE,MOUNTPOINT,SERIAL
-
-<img width="546" height="157" alt="image" src="https://github.com/user-attachments/assets/162e7781-0612-419c-8cfb-2db62a7a9b1d" />
+```
+<br><img width="546" height="157" alt="image" src="https://github.com/user-attachments/assets/162e7781-0612-419c-8cfb-2db62a7a9b1d" />
 
 
 ### Task 2: Create Physical Volume
 ```bash
 pvcreate /dev/sdb   # or your loop device
 pvs
-
-<img width="406" height="89" alt="image" src="https://github.com/user-attachments/assets/20d2069b-3c0f-4830-b630-a786ad1216a4" />
-
 ```
+<br><img width="406" height="89" alt="image" src="https://github.com/user-attachments/assets/20d2069b-3c0f-4830-b630-a786ad1216a4" />
 
 ### Task 3: Create Volume Group
+
 ```bash
 vgcreate devops-vg /dev/sdb
 vgs
-
-<img width="477" height="120" alt="image" src="https://github.com/user-attachments/assets/ae17bd4b-2648-499a-bfea-854c1099ff31" />
-
 ```
+<br><img width="477" height="120" alt="image" src="https://github.com/user-attachments/assets/ae17bd4b-2648-499a-bfea-854c1099ff31" />
 
 ### Task 4: Create Logical Volume
 ```bash
 lvcreate -L 500M -n app-data devops-vg
 lvs
+```
+<br><img width="643" height="87" alt="image" src="https://github.com/user-attachments/assets/6c042443-ebfc-41cf-80d4-bf71d4e35af4" />
 
-<img width="643" height="87" alt="image" src="https://github.com/user-attachments/assets/6c042443-ebfc-41cf-80d4-bf71d4e35af4" />
+```bash
+pvdisplay
+```
+<br><img width="447" height="478" alt="image" src="https://github.com/user-attachments/assets/108e9b0b-9555-4dd9-8b23-28eac223c6fd" />
 
-pvdisplay and vgdisplay output
-
-<img width="447" height="478" alt="image" src="https://github.com/user-attachments/assets/108e9b0b-9555-4dd9-8b23-28eac223c6fd" />
-
-<img width="538" height="408" alt="image" src="https://github.com/user-attachments/assets/e242d3c8-477a-4d8a-92ac-b4c18fcecdf4" />
+```bash
+vgdisplay
+```
+<br><img width="538" height="408" alt="image" src="https://github.com/user-attachments/assets/e242d3c8-477a-4d8a-92ac-b4c18fcecdf4" />
 
 ```
 
