@@ -91,10 +91,10 @@ Using `chown` you can change both owner and group together:
 1. Create directory structure:
 
 ```bash
-   mkdir -p heist-project/vault
-   mkdir -p heist-project/plans
-   touch heist-project/vault/gold.txt
-   touch heist-project/plans/strategy.conf
+mkdir -p heist-project/vault
+mkdir -p heist-project/plans
+touch heist-project/vault/gold.txt
+touch heist-project/plans/strategy.conf
 ```
 
    <br><img width="472" height="77" alt="image" src="https://github.com/user-attachments/assets/4055034c-8cbe-4c81-beca-a0d571849f84" />
