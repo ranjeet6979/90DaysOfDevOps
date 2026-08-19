@@ -58,7 +58,7 @@ lsblk -o NAME,SIZE,TYPE,MOUNTPOINT,SERIAL
 pvcreate /dev/sdb   # or your loop device
 pvs
 ```
-<br><img width="406" height="89" alt="image" src="https://github.com/user-attachments/assets/20d2069b-3c0f-4830-b630-a786ad1216a4" />
+<img width="406" height="89" alt="image" src="https://github.com/user-attachments/assets/20d2069b-3c0f-4830-b630-a786ad1216a4" />
 
 ### Task 3: Create Volume Group
 
@@ -66,26 +66,24 @@ pvs
 vgcreate devops-vg /dev/sdb
 vgs
 ```
-<br><img width="477" height="120" alt="image" src="https://github.com/user-attachments/assets/ae17bd4b-2648-499a-bfea-854c1099ff31" />
+<img width="477" height="120" alt="image" src="https://github.com/user-attachments/assets/ae17bd4b-2648-499a-bfea-854c1099ff31" />
 
 ### Task 4: Create Logical Volume
 ```bash
 lvcreate -L 500M -n app-data devops-vg
 lvs
 ```
-<br><img width="643" height="87" alt="image" src="https://github.com/user-attachments/assets/6c042443-ebfc-41cf-80d4-bf71d4e35af4" />
+<img width="643" height="87" alt="image" src="https://github.com/user-attachments/assets/6c042443-ebfc-41cf-80d4-bf71d4e35af4" />
 
 ```bash
 pvdisplay
 ```
-<br><img width="447" height="478" alt="image" src="https://github.com/user-attachments/assets/108e9b0b-9555-4dd9-8b23-28eac223c6fd" />
+<img width="447" height="478" alt="image" src="https://github.com/user-attachments/assets/108e9b0b-9555-4dd9-8b23-28eac223c6fd" />
 
 ```bash
 vgdisplay
 ```
-<br><img width="538" height="408" alt="image" src="https://github.com/user-attachments/assets/e242d3c8-477a-4d8a-92ac-b4c18fcecdf4" />
-
-```
+<img width="538" height="408" alt="image" src="https://github.com/user-attachments/assets/e242d3c8-477a-4d8a-92ac-b4c18fcecdf4" />
 
 ### Task 5: Format and Mount
 ```bash
@@ -93,12 +91,9 @@ mkfs.ext4 /dev/devops-vg/app-data
 mkdir -p /mnt/app-data
 mount /dev/devops-vg/app-data /mnt/app-data
 df -h /mnt/app-data
-
-<img width="700" height="591" alt="image" src="https://github.com/user-attachments/assets/e166bb52-e2da-490c-85f1-a1321d913065" />
-
-<img width="645" height="47" alt="image" src="https://github.com/user-attachments/assets/5f24c534-1245-4d70-a5d0-b6b23b4320d9" />
-
 ```
+<img width="700" height="591" alt="image" src="https://github.com/user-attachments/assets/e166bb52-e2da-490c-85f1-a1321d913065" />
+<br><img width="645" height="47" alt="image" src="https://github.com/user-attachments/assets/5f24c534-1245-4d70-a5d0-b6b23b4320d9" />
 
 ### Task 6: Extend the Volume
 ```bash
