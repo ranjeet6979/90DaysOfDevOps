@@ -96,10 +96,9 @@ mkdir -p heist-project/plans
 touch heist-project/vault/gold.txt
 touch heist-project/plans/strategy.conf
 ```
-   <br><img width="472" height="77" alt="image" src="https://github.com/user-attachments/assets/4055034c-8cbe-4c81-beca-a0d571849f84" />
+   <img width="472" height="77" alt="image" src="https://github.com/user-attachments/assets/4055034c-8cbe-4c81-beca-a0d571849f84" />
 
 2. Create group `planners`: `sudo groupadd planners`
-
    <br><img width="333" height="59" alt="image" src="https://github.com/user-attachments/assets/72008003-947d-43a0-802e-c96eb5e4427e" />
 
 3. Change ownership of entire `heist-project/` directory:
