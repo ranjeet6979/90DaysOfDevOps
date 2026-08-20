@@ -59,38 +59,28 @@ jobs:
 
 # GitHub Actions Run Output
 
+# GitHub Actions Workflow Output
+
 <details>
-<summary>Runner Image Provisioner</summary>
+<summary>✅ Set up job</summary>
 
 ```text
-Runner Image Provisioner
+Current runner version: '2.336.0'
+
+▼ Runner Image Provisioner
   Hosted Compute Agent
   Version: 20260729.566
   Commit: cf7153fe6e25b664e8693c24944bf2b00355d109
   Build Date: 2026-07-29T19:17:02Z
   Worker ID: {fd2e2b3b-61aa-4e15-bffd-624c517f9f33}
   Azure Region: eastus
-```
 
-</details>
-
-<details>
-<summary>Operating System</summary>
-
-```text
-Operating System
+▼ Operating System
   Ubuntu
   24.04.4
   LTS
-```
 
-</details>
-
-<details>
-<summary>Runner Image</summary>
-
-```text
-Runner Image
+▼ Runner Image
   Image: ubuntu-24.04
   Version: 20260810.271.1
   Included Software:
@@ -98,92 +88,138 @@ Runner Image
 
   Image Release:
     https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260810.271
+
+▼ GITHUB_TOKEN Permissions
+  Contents: read
+  Metadata: read
+  Packages: read
+
+Secret source: Actions
+Prepare workflow directory
+Prepare all required actions
+Getting action download info
+
+Download action repository 'actions/checkout@v7'
+  SHA: 3d3c42e5aac5ba805825da76410c181273ba90b1
+
+Complete job name: greet-job-name
 ```
 
 </details>
 
 <details>
-<summary>Setup Job</summary>
+<summary>✅ checkout-code</summary>
 
 ```text
-Setup job
-  Current runner version: '2.336.0'
-
-  GITHUB_TOKEN Permissions
-    Contents: read
-    Metadata: read
-    Packages: read
-
-  Secret source: Actions
-  Prepare workflow directory
-  Prepare all required actions
-  Getting action download info
-
-  Download action repository:
-    actions/checkout@v7
-```
-
-</details>
-
-<details>
-<summary>Checkout Code</summary>
-
-```text
-Run actions/checkout@v7
+▼ Run actions/checkout@v7
 
   with:
     repository: ranjeet6979/GitHub-actions-practice
-    fetch-depth: 1
+    token: ***
+    ssh-strict: true
+    ssh-us**: git
+    persist-credentials:**rue
     clean: true
-    persist-credentials: true
+    sparse-ch**kout-cone-mode: true
+    fetch-de**h: 1
+    fetch-tags: false
+** **how-progress: true
+    lfs: false**   submodules: false
+    set-safe**irectory: true
+    allow-unsafe-p**checkout: false
 
-  Syncing repository:
-    ranjeet6979/GitHub-actions-practice
+Syncing reposito**:
+  ranjeet6979/GitHub-actions-pr**tice
 
-  Getting Git version info
-    git version 2.54.0
+▼ Getting Git version**nfo
 
-  Initializing repository
-  Setting up auth
-  Fetching repository
-  Checking out ref
+  Working directory:
+    /ho**/runner/work/GitHub-actions-pract**e/GitHub-actions-practice
 
-  Switched to a new branch 'main'
-  branch 'main' set up to track 'origin/main'.
+  /usr**in/git version
+  git version 2.54**
 
-  Commit:
-    66bd0545bc4b77c9b8463546b96d770705e7a277
+Tem**r**ily overriding HOME before making**lobal git config changes
+
+Adding**epository directory to temporary **t global config
+  /usr/bin/git co**ig --global --add safe.directory **  /home/runner/work/GitHub-action**practice/GitHub-actions-practice
+**eleting repository contents
+
+▼ De**rmining repository object format
+** Initializing repository
+
+  /usr/**n/git init
+**Initialized empty Git repository
+** /usr/bin/git remote add origin
+ **ttps://github.com/ranjeet6979/GitHub-actions-practice
+
+▼ Disabling a**omatic garbage collection
+
+  /usr**in/git config --local gc.auto 0
+
+**Setting up auth
+
+  Removing SSH c**mand configuration
+  Removing HTT**extra header
+  Removing includeIf**ntries
+
+▼ Fetching the repository**  /usr/bin**it**etch --depth=1
+
+  From:
+    https://github.com/ranjeet6979/GitHub-actions-practice
+
+  [new ref]
+    66b**545bc4b77c9b8463546b96d770705e7a2** -> origin/main
+
+▼ Determining ch**kout info
+
+▼ Checking out the ref**  /usr/bin/git checkout --force -**main
+
+  Switched to a new branch **ain'
+  Branch 'main' set up to tr**k 'origin/main'
+
+▼ Latest Commit
+** 66bd0545bc4b77c9b8463546b96d7707**e7a277
 ```
 
 </details>
 
-<details>
-<summary>Echo Hello</summary>
+<details>**summary>✅ echo-hello</summary>
 
-```text
-Run echo "Hello from GitHub Actions!"
+`**text
+Run echo "Hello from GitHub **tions!"
 
-  shell: /usr/bin/bash -e {0}
+  shell: /usr/bin/bash -**{0}
 
 Hello from GitHub Actions!
+`**
+
+</details>
+
+<details>
+<summary>**Post checkout-code</summary>
+
+```**xt
+Post job cleanup
+
+git version **54.0
+
+Removing SSH command config**ation
+Removing HTTP extra header
+**moving includeIf entries
+
+Removing credentials config:
+  /home/runner/work/_temp/git-credentials-xxxx.config
 ```
 
 </details>
 
 <details>
-<summary>Post Job Cleanup</summary>
+<summary>✅ Complete job</summary>
 
 ```text
-Post checkout-code
-Post job cleanup.
-
-  git version 2.54.0
-
-  Removing SSH command configuration
-  Removing HTTP extra header
-  Removing credentials config
-
 Complete job
+
 Cleaning up orphan processes
 ```
 
