@@ -198,9 +198,6 @@ Hello from GitHub Actions!
 </details>
 
 <details>
-<summary>**Post checkout-code</summary>
-
-<details>
 <summary>✅ Post checkout-code</summary>
 
 ```text
