@@ -62,32 +62,26 @@ Research and write short definitions (2-3 lines each):
 ### Task 3: Pipeline Anatomy
 A pipeline has these parts — write what each one does:
 - **Trigger** — what starts the pipeline
-  
   **Answer:**
   A pipeline trigger is a condition or event that starts an automated pipeline that performs build, test, deployment, or other operational workflows.
   
 - **Stage** — a logical phase (build, test, deploy)
-  
   **Answer:**
   Groups related tasks into a major phase of the lifecycle, ensuring the build phase passes before testing begins.
   
 - **Job** — a unit of work inside a stage
-  
   **Answer:**
   A job is a sequential set of steps executed on the same runner or agent
   
 - **Step** — a single command or action inside a job
-  
   **Answer:**
   A step is a single, specific task that runs inside a larger automated process (a job)
   
 - **Runner** — the machine that executes the job
-  
   **Answer:**
   Provides the underlying physical server, virtual machine, or container environment that actually runs the job.
   
 - **Artifact** — output produced by a job
-  
   **Answer:**
   Jobs can output an archive of files and directories. This output is known as a job artifact. Artifacts can include build output or report files.
 
