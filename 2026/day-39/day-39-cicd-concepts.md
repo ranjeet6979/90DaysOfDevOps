@@ -152,14 +152,17 @@ jobs:
 4. Write in your notes:
    - What triggers it?
      
+     **Answer:**
      This workflow is triggered for pull_request_target events and when issues are opened or reopened. The pull_request_target event runs with the permissions of the target repository and may have access to repository secrets
      
    - How many jobs does it have?
 
+     **Answer:**
      The workflow has one job named add-to-project.
      
    - What does it do? (best guess)
 
+     **Answer:**
      The workflow automatically adds newly created/reopened issues and pull requests to the GitHub Project.
   
 ---
