@@ -34,19 +34,28 @@ Write in your notes:
 ### Task 2: CI vs CD
 Research and write short definitions (2-3 lines each):
 #### 1. **Continuous Integration** — what happens, how often, what it catches
-   <br>this involves code and integrating the code in version control systems (VCS) like Git/GitHub, building the code to create a deployable package/executable, performing automated testing.
-   <br>In this, developers frequently merge code into a central repository multiple times a day. Each merge triggers automated builds and tests to catch bugs and integration conflicts immediately.
-   <br>Software Example: Multiple developers work on a ride-sharing app. When a developer pushes code for a new "fare estimator" feature, an automated server instantly builds the app and runs tests to ensure it does not break the existing login or GPS systems.
+   
+   this involves code and integrating the code in version control systems (VCS) like Git/GitHub, building the code to create a deployable package/executable, performing automated testing.
+   
+   In this, developers frequently merge code into a central repository multiple times a day. Each merge triggers automated builds and tests to catch bugs and integration conflicts immediately.
+   
+   Software Example: Multiple developers work on a ride-sharing app. When a developer pushes code for a new "fare estimator" feature, an automated server instantly builds the app and runs tests to ensure it does not break the existing login or GPS systems.
 
 #### 2. **Continuous Delivery** — how it's different from CI, what "delivery" means
-   <br>This involves pushing the code to VCS, build/compile the code, testing pushed code and make it ready to deploy. However, it is not deployed until manual approval to deploy.
-   <br>This extends CI by automatically building, testing, and preparing code changes for release. The software is always in a deployable state, but actual deployment to live users requires a final manual approval.
-   <br>Software Example: A healthcare platform updates its patient portal. The system automatically tests the new code and moves it to a staging environment. The product manager then reviews it and manually clicks "Deploy" during a weekend maintenance window.
+   
+   This involves pushing the code to VCS, build/compile the code, testing pushed code and make it ready to deploy. However, it is not deployed until manual approval to deploy.
+   
+   This extends CI by automatically building, testing, and preparing code changes for release. The software is always in a deployable state, but actual deployment to live users requires a final manual approval.
+   
+   Software Example: A healthcare platform updates its patient portal. The system automatically tests the new code and moves it to a staging environment. The product manager then reviews it and manually clicks "Deploy" during a weekend maintenance window.
    
 #### 3. **Continuous Deployment** — how it differs from Delivery, when teams use it
-   <br>This involces pushing the code to VCS, build/compile the code, testing pushed code and deploy the code.
-   <br>This removes human intervention entirely from the release pipeline. Every code change that passes all automated testing stages is automatically deployed directly to production and live users within minutes.
-   <br>Software Example: Streaming platforms like Netflix use this approach. If a developer fixes a minor UI bug on the video player page, the code passes automated tests and goes live to millions of users worldwide immediately without needing a manager's sign-off.
+   
+   This involces pushing the code to VCS, build/compile the code, testing pushed code and deploy the code.
+   
+   This removes human intervention entirely from the release pipeline. Every code change that passes all automated testing stages is automatically deployed directly to production and live users within minutes.
+   
+   Software Example: Streaming platforms like Netflix use this approach. If a developer fixes a minor UI bug on the video player page, the code passes automated tests and goes live to millions of users worldwide immediately without needing a manager's sign-off.
    
 ---
 
