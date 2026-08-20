@@ -230,12 +230,25 @@ Cleaning up orphan processes
 ### Task 3: Understand the Anatomy
 Look at your workflow file and write in your notes what each key does:
 - `on:`
+  Defines the event(s) that trigger the workflow. For example, `workflow_dispatch` allows manual execution from the GitHub Actions UI, while `workflow_call` allows another workflow to invoke the current workflow.
+  
 - `jobs:`
+  Defines one or more jobs that the workflow will execute.
+  
 - `runs-on:`
+  Specifies the runner environment (operating system or runner label) where a job will run, such as `ubuntu-latest` or `windows-latest`
+  
 - `steps:`
+  Defines the sequence of actions and commands executed within a job.
+  
 - `uses:`
+  References an action to run, such as `actions/checkout@v7` to check out the repository code.
+  
 - `run:`
+  Specifies a shell command or script to execute on the runner.
+  
 - `name:` (on a step)
+  Provides a human-readable name displayed in the workflow logs for that step.
 
 ---
 
