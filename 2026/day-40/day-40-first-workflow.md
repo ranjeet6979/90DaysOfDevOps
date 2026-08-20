@@ -57,9 +57,7 @@ jobs:
 
 **Verify:** Is it green? Click into the job and read every step.
 
-# GitHub Actions Run Output
-
-# GitHub Actions Workflow Output
+**GitHub Actions Workflow Output**
 
 <details>
 <summary>✅ Set up job</summary>
