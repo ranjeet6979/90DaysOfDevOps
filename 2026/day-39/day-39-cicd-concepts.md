@@ -118,8 +118,12 @@ Include at least 3 stages. Hand-drawn and photographed is perfectly fine.
 
 ### Task 5: Explore in the Wild
 1. Open any popular open-source repo on GitHub (Kubernetes, React, FastAPI — pick one you know)
+
+   FastAPI
+   
 2. Find their `.github/workflows/` folder
 3. Open one workflow YAML file
+4. .github/workflows/add-to-project.yml
 
 ```yaml
 name: Add to Project
@@ -151,12 +155,13 @@ jobs:
      This workflow is triggered for pull_request_target events and when issues are opened or reopened. The pull_request_target event runs with the permissions of the target repository and may have access to repository secrets
      
    - How many jobs does it have?
+
      The workflow has one job named add-to-project.
      
    - What does it do? (best guess)
+
      The workflow automatically adds newly created/reopened issues and pull requests to the GitHub Project.
   
-     
 ---
 
 ## Hints
