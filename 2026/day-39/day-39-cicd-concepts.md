@@ -83,17 +83,80 @@ Draw a CI/CD pipeline for this scenario:
 
 Include at least 3 stages. Hand-drawn and photographed is perfectly fine.
 
+### CI/CD Pipeline
+
+```text
++-----------------+
+| Developer Push  |
+| Code to GitHub  |
++--------+--------+
+         |
+         v
++-----------------+
+| Run Tests       |
++--------+--------+
+         |
+         v
++-----------------+
+| Build App       |
++--------+--------+
+         |
+         v
++-----------------+
+| Build Docker    |
+| Image           |
++--------+--------+
+         |
+         v
++-----------------+
+| Deploy to       |
+| Staging Server  |
++-----------------+
+```
+
 ---
 
 ### Task 5: Explore in the Wild
 1. Open any popular open-source repo on GitHub (Kubernetes, React, FastAPI — pick one you know)
 2. Find their `.github/workflows/` folder
 3. Open one workflow YAML file
+
+```yaml
+name: Add to Project
+
+on:
+  pull_request_target: # zizmor: ignore[dangerous-triggers]
+  issues:
+    types:
+      - opened
+      - reopened
+
+permissions: {}
+
+jobs:
+  add-to-project:
+    name: Add to project
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/add-to-project@5afcf98fcd03f1c2f92c3c83f58ae24323cc57fd # v2.0.0
+        with:
+          project-url: https://github.com/orgs/fastapi/projects/2
+          github-token: ${{ secrets.PROJECTS_TOKEN }} # zizmor: ignore[secrets-outside-env]
+```
+
 4. Write in your notes:
    - What triggers it?
+     
+     This workflow is triggered for pull_request_target events and when issues are opened or reopened. The pull_request_target event runs with the permissions of the target repository and may have access to repository secrets
+     
    - How many jobs does it have?
+     The workflow has one job named add-to-project.
+     
    - What does it do? (best guess)
-
+     The workflow automatically adds newly created/reopened issues and pull requests to the GitHub Project.
+  
+     
 ---
 
 ## Hints
