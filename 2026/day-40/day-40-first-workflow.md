@@ -58,6 +58,7 @@ jobs:
 **Verify:** Is it green? Click into the job and read every step.
 
 **GitHub Actions Workflow Output**
+[Output link]([https://github.com/ranjeet6979/GitHub-actions-practice](https://github.com/ranjeet6979/GitHub-actions-practice/actions/runs/32376211158))
 
 <details>
 <summary>✅ Set up job</summary>
