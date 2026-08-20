@@ -57,6 +57,138 @@ jobs:
 
 **Verify:** Is it green? Click into the job and read every step.
 
+# GitHub Actions Run Output
+
+<details>
+<summary>Runner Image Provisioner</summary>
+
+```text
+Runner Image Provisioner
+  Hosted Compute Agent
+  Version: 20260729.566
+  Commit: cf7153fe6e25b664e8693c24944bf2b00355d109
+  Build Date: 2026-07-29T19:17:02Z
+  Worker ID: {fd2e2b3b-61aa-4e15-bffd-624c517f9f33}
+  Azure Region: eastus
+```
+
+</details>
+
+<details>
+<summary>Operating System</summary>
+
+```text
+Operating System
+  Ubuntu
+  24.04.4
+  LTS
+```
+
+</details>
+
+<details>
+<summary>Runner Image</summary>
+
+```text
+Runner Image
+  Image: ubuntu-24.04
+  Version: 20260810.271.1
+  Included Software:
+    https://github.com/actions/runner-images/blob/ubuntu24/20260810.271/images/ubuntu/Ubuntu2404-Readme.md
+
+  Image Release:
+    https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260810.271
+```
+
+</details>
+
+<details>
+<summary>Setup Job</summary>
+
+```text
+Setup job
+  Current runner version: '2.336.0'
+
+  GITHUB_TOKEN Permissions
+    Contents: read
+    Metadata: read
+    Packages: read
+
+  Secret source: Actions
+  Prepare workflow directory
+  Prepare all required actions
+  Getting action download info
+
+  Download action repository:
+    actions/checkout@v7
+```
+
+</details>
+
+<details>
+<summary>Checkout Code</summary>
+
+```text
+Run actions/checkout@v7
+
+  with:
+    repository: ranjeet6979/GitHub-actions-practice
+    fetch-depth: 1
+    clean: true
+    persist-credentials: true
+
+  Syncing repository:
+    ranjeet6979/GitHub-actions-practice
+
+  Getting Git version info
+    git version 2.54.0
+
+  Initializing repository
+  Setting up auth
+  Fetching repository
+  Checking out ref
+
+  Switched to a new branch 'main'
+  branch 'main' set up to track 'origin/main'.
+
+  Commit:
+    66bd0545bc4b77c9b8463546b96d770705e7a277
+```
+
+</details>
+
+<details>
+<summary>Echo Hello</summary>
+
+```text
+Run echo "Hello from GitHub Actions!"
+
+  shell: /usr/bin/bash -e {0}
+
+Hello from GitHub Actions!
+```
+
+</details>
+
+<details>
+<summary>Post Job Cleanup</summary>
+
+```text
+Post checkout-code
+Post job cleanup.
+
+  git version 2.54.0
+
+  Removing SSH command configuration
+  Removing HTTP extra header
+  Removing credentials config
+
+Complete job
+Cleaning up orphan processes
+```
+
+</details>
+
 ---
 
 ### Task 3: Understand the Anatomy
