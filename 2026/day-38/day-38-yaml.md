@@ -85,13 +85,13 @@ Write in your notes: When would you use `|` vs `>`?
 ### Task 5: Validate Your YAML
 1. Install `yamllint` or use an online validator
 2. Validate both your YAML files
-   <br><img width="822" height="524" alt="image" src="https://github.com/user-attachments/assets/2feb1ef5-a56f-40f1-9ec4-d0d30d2badd7" />
+<br><img width="822" height="524" alt="image" src="https://github.com/user-attachments/assets/2feb1ef5-a56f-40f1-9ec4-d0d30d2badd7" />
 
-3. Intentionally break the indentation — what error do you get?
-   <br><img width="816" height="565" alt="image" src="https://github.com/user-attachments/assets/cfe9b2d5-518b-4f18-ba36-bafeee2fc20e" />
+4. Intentionally break the indentation — what error do you get?
+<br><img width="816" height="565" alt="image" src="https://github.com/user-attachments/assets/cfe9b2d5-518b-4f18-ba36-bafeee2fc20e" />
 
-4. Fix it and validate again
-   <br><img width="822" height="524" alt="image" src="https://github.com/user-attachments/assets/d34be565-0e74-4a24-bd5c-7ad90e9b586b" />
+5. Fix it and validate again
+<br><img width="822" height="524" alt="image" src="https://github.com/user-attachments/assets/d34be565-0e74-4a24-bd5c-7ad90e9b586b" />
 
 
 ---
@@ -114,6 +114,7 @@ tools:
 - docker
   - kubernetes
 ```
+
 <br>No proper indentation for 'docker' in the list.
 <br>Inconsistent indentation: 'docker' and 'kubernetes' are not aligned at the same level.
 
