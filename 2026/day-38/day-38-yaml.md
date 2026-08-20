@@ -40,13 +40,19 @@ Add to `person.yaml`:
 
 Write in your notes: What are the two ways to write a list in YAML?
 <br>1. Block Style (Using Dashes): This style uses a new line for each item, preceded by a hyphen (-) and a space. It is the most common and readable format.yaml
-<br>fruits:
-<br>  - Apple
-<br>  - Banana
-<br>  - Orange
+
+```yaml
+fruits:
+  - Apple
+  - Banana
+  - Orange
+```
 
 <br>2. Flow Style (Using Square Brackets): This style writes all items on a single line enclosed in square brackets [ ] and separated by commas. It is compact and looks identical to JSON array syntax.yaml
-<br>fruits: [Apple, Banana, Orange] 
+
+```yaml
+fruits: [Apple, Banana, Orange] 
+```
 
 ---
 
@@ -79,12 +85,12 @@ Write in your notes: When would you use `|` vs `>`?
 ### Task 5: Validate Your YAML
 1. Install `yamllint` or use an online validator
 2. Validate both your YAML files
-3. <br><img width="822" height="524" alt="image" src="https://github.com/user-attachments/assets/2feb1ef5-a56f-40f1-9ec4-d0d30d2badd7" />
+   <br><img width="822" height="524" alt="image" src="https://github.com/user-attachments/assets/2feb1ef5-a56f-40f1-9ec4-d0d30d2badd7" />
 
-4. Intentionally break the indentation — what error do you get?
+3. Intentionally break the indentation — what error do you get?
    <br><img width="816" height="565" alt="image" src="https://github.com/user-attachments/assets/cfe9b2d5-518b-4f18-ba36-bafeee2fc20e" />
 
-5. Fix it and validate again
+4. Fix it and validate again
    <br><img width="822" height="524" alt="image" src="https://github.com/user-attachments/assets/d34be565-0e74-4a24-bd5c-7ad90e9b586b" />
 
 
