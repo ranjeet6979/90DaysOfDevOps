@@ -33,33 +33,21 @@ Write in your notes:
 
 ### Task 2: CI vs CD
 Research and write short definitions (2-3 lines each):
-1. **Continuous Integration** — what happens, how often, what it catches
-   <br>this involves code and integrating the code in version control systems (VCS) like Git/Github, building the code to create a deployable package/executable, performing automated testing.
+#### 1. **Continuous Integration** — what happens, how often, what it catches
+   <br>this involves code and integrating the code in version control systems (VCS) like Git/GitHub, building the code to create a deployable package/executable, performing automated testing.
+   <br>In this, developers frequently merge code into a central repository multiple times a day. Each merge triggers automated builds and tests to catch bugs and integration conflicts immediately.
+   <br>Software Example: Multiple developers work on a ride-sharing app. When a developer pushes code for a new "fare estimator" feature, an automated server instantly builds the app and runs tests to ensure it does not break the existing login or GPS systems.
 
-2. **Continuous Delivery** — how it's different from CI, what "delivery" means
-   <br>This involces pushing the code to VCS, build/compile the code, testing pushed code and make it ready to deploy. However it is not deploy until manual approval to deploy.
+#### 2. **Continuous Delivery** — how it's different from CI, what "delivery" means
+   <br>This involves pushing the code to VCS, build/compile the code, testing pushed code and make it ready to deploy. However, it is not deployed until manual approval to deploy.
+   <br>This extends CI by automatically building, testing, and preparing code changes for release. The software is always in a deployable state, but actual deployment to live users requires a final manual approval.
+   <br>Software Example: A healthcare platform updates its patient portal. The system automatically tests the new code and moves it to a staging environment. The product manager then reviews it and manually clicks "Deploy" during a weekend maintenance window.
    
-3. **Continuous Deployment** — how it differs from Delivery, when teams use it
+#### 3. **Continuous Deployment** — how it differs from Delivery, when teams use it
    <br>This involces pushing the code to VCS, build/compile the code, testing pushed code and deploy the code.
-
-#### 1. Continuous Integration (CI)
-* **Definition:** Developers frequently merge code into a central repository multiple times a day. Each merge triggers automated builds and tests to catch bugs and integration conflicts immediately.
-* **Software Example:** Multiple developers work on a ride-sharing app. When a developer pushes code for a new "fare estimator" feature, an automated server instantly builds the app and runs tests to ensure it does not break the existing login or GPS systems.
-* **Simple Analogy:** Every time a baker adds a new ingredient to the mixing bowl, they stir it and taste a spoonful immediately. This catches mistakes (like using salt instead of sugar) before baking.
-
-#### 2. Continuous Delivery
-* **Definition:** This extends CI by automatically building, testing, and preparing code changes for release. The software is always in a deployable state, but actual deployment to live users requires a final manual approval.
-* **Software Example:** A healthcare platform updates its patient portal. The system automatically tests the new code and moves it to a staging environment. The product manager then reviews it and manually clicks "Deploy" during a weekend maintenance window.
-* **Simple Analogy:** The baker bakes the cake, decorates it, and boxes it up on the counter. The cake is 100% ready, but it sits there until the shop manager approves it and hands it to the buyer.
-
-#### 3. Continuous Deployment
-* **Definition:** This removes human intervention entirely from the release pipeline. Every code change that passes all automated testing stages is automatically deployed directly to production and live users within minutes.
-* **Software Example:** Streaming platforms like Netflix use this approach. If a developer fixes a minor UI bug on the video player page, the code passes automated tests and goes live to millions of users worldwide immediately without needing a manager's sign-off.
-* **Simple Analogy:** The bakery uses an automated vending machine. As soon as a cake is baked and wrapped, the machine immediately dispenses it directly to the waiting customer without human intervention.
-
-
-Write one real-world example for each.
-
+   <br>This removes human intervention entirely from the release pipeline. Every code change that passes all automated testing stages is automatically deployed directly to production and live users within minutes.
+   <br>Software Example: Streaming platforms like Netflix use this approach. If a developer fixes a minor UI bug on the video player page, the code passes automated tests and goes live to millions of users worldwide immediately without needing a manager's sign-off.
+   
 ---
 
 ### Task 3: Pipeline Anatomy
