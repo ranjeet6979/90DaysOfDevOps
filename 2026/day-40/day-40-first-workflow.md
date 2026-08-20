@@ -184,29 +184,33 @@ Adding**epository directory to temporary **t global config
 
 </details>
 
-<details>**summary>✅ echo-hello</summary>
+<details>
+<summary>✅ echo-hello</summary>
 
-`**text
-Run echo "Hello from GitHub **tions!"
+```text
+Run echo "Hello from GitHub Actions!"
 
-  shell: /usr/bin/bash -**{0}
+  shell: /usr/bin/bash -e {0}
 
 Hello from GitHub Actions!
-`**
+```
 
 </details>
 
 <details>
 <summary>**Post checkout-code</summary>
 
-```**xt
+<details>
+<summary>✅ Post checkout-code</summary>
+
+```text
 Post job cleanup
 
-git version **54.0
+git version 2.54.0
 
-Removing SSH command config**ation
+Removing SSH command configuration
 Removing HTTP extra header
-**moving includeIf entries
+Removing includeIf entries
 
 Removing credentials config:
   /home/runner/work/_temp/git-credentials-xxxx.config
