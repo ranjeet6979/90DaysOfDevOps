@@ -184,8 +184,85 @@ jobs:
 
 ### Task 5: Exclude & Fail-Fast
 1. In your matrix, **exclude** one specific combination (e.g., Python 3.10 on Windows)
-2. Set `fail-fast: false` — trigger a failure in one job and observe what happens to the rest
-3. Write in your notes: What does `fail-fast: true` (the default) do vs `false`?
+
+```yaml
+
+name: matrix-check
+on:
+  workflow_dispatch:
+
+jobs:
+  python-matrix:
+    strategy:
+      matrix:
+        exclude:
+          - os: ubuntu-latest
+            version: '3.11'
+          - os: ubuntu-22.04-arm
+            version: '3.12'
+        version:
+          - '3.10'
+          - '3.11'
+          - '3.12'
+        os:
+          - 'ubuntu-latest'
+          - 'ubuntu-22.04-arm'
+    runs-on: ${{  matrix.os  }}
+    steps:
+    - name: apt update
+      run: sudo apt-get update -y
+    - uses: actions/checkout@v7
+    - uses: actions/setup-python@v7
+      with:
+        python-version: '${{  matrix.version  }}'
+    - run: python --version
+
+```
+
+   <img width="1427" height="604" alt="image" src="https://github.com/user-attachments/assets/e0f61195-1d05-40e7-9b60-3182240b6772" />
+
+3. Set `fail-fast: false` — trigger a failure in one job and observe what happens to the rest
+
+```yaml
+name: matrix-check
+on:
+  workflow_dispatch:
+
+jobs:
+  python-matrix:
+    strategy:
+      fail-fast: false
+      matrix:
+        exclude:
+          - os: ubuntu-latest
+            version: '3.11'
+          - os: ubuntu-22.04-arm
+            version: '3.12'
+        version:
+          - 3.10
+          - 3.11
+          - 3.12
+        os:
+          - 'ubuntu-latest'
+          - 'ubuntu-22.04-arm'
+    runs-on: ${{  matrix.os  }}
+    steps:
+    - name: apt update
+      run: sudo apt-get update -y
+    - uses: actions/checkout@v7
+    - uses: actions/setup-python@v7
+      with:
+        python-version: '${{  matrix.version  }}'
+    - run: python --version
+```
+
+<img width="1397" height="751" alt="image" src="https://github.com/user-attachments/assets/6789df9e-72f2-4c97-a171-611655d945b7" />
+    
+5. Write in your notes: What does `fail-fast: true` (the default) do vs `false`?
+
+**fail-fast**: true (Default): If one job fails, GitHub cancels all other running jobs immediately to save time.
+
+**fail-fast:** false: If one job fails, GitHub allows all other parallel jobs to keep running until they finish.
 
 ---
 
