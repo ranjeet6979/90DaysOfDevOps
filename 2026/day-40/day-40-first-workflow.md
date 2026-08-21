@@ -298,7 +298,17 @@ Push again — watch the new run.
 ### Task 5: Break It On Purpose
 1. Add a step that runs a command that will **fail** (e.g., `exit 1` or a misspelled command)
 2. Push and observe what happens in the Actions tab
-3. Fix it and push again
+
+   <img width="1321" height="489" alt="image" src="https://github.com/user-attachments/assets/101d2c09-778f-46a6-9b23-ef366229e8ae" />
+
+   <img width="1317" height="600" alt="image" src="https://github.com/user-attachments/assets/8fbb0162-9d38-4c95-935d-f4fc2606a5a5" />
+
+   Github actions UI will show step is failed with error details.
+
+4. Fix it and push again
+
+   <img width="1322" height="554" alt="image" src="https://github.com/user-attachments/assets/267c2e67-a5ba-4585-a773-ca8334cffa1b" />
+
 
 Write in your notes: What does a failed pipeline look like? How do you read the error?
 
