@@ -54,7 +54,24 @@ jobs:
 ### Task 2: Scheduled Trigger
 1. Add a `schedule:` trigger to any workflow using cron syntax
 2. Set it to run every day at midnight UTC
+
+```yaml
+
+   name: hello workflow
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+```
+  
 3. Write in your notes: What is the cron expression for every Monday at 9 AM?
+
+   ```yaml
+
+    - cron: "00 9 * * *"
+
+   ```
 
 ---
 
