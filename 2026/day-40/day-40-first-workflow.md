@@ -259,7 +259,39 @@ Update `hello.yml` to also:
 3. List the files in the repo
 4. Print the runner's operating system
 
+```yaml
+name: hello workflow
+on:
+  workflow_dispatch:
+jobs:
+  greet-job:
+    name: greet-job-name
+    runs-on: ubuntu-latest
+    steps:
+    - name: Code Checkout
+      uses: actions/checkout@v7
+    - name: print-date
+      run: date      
+    - name: echo-hello
+      run: echo "Hello from GitHub Actions!"
+    - name: print branch name
+      run: |
+        echo "Branch name is: ${{ github.ref_name }}"
+    - name: list files in repo
+      run: |
+        echo "Files in Repo are:"
+        ls -ltrha
+    - name: print runner OS
+      run: |
+        echo "Runner OS is:"
+        cat /etc/os-release
+```
+
 Push again — watch the new run.
+
+<img width="1029" height="531" alt="image" src="https://github.com/user-attachments/assets/74cad2b4-9d28-4870-bb1e-b55a3123d9c9" />
+
+<img width="1030" height="383" alt="image" src="https://github.com/user-attachments/assets/d59ae432-1eb8-4126-8f2b-84a421b02ad3" />
 
 ---
 
