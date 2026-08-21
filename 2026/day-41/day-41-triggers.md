@@ -147,8 +147,38 @@ jobs:
 
 <img width="1425" height="606" alt="image" src="https://github.com/user-attachments/assets/1ac96582-0f9b-4c3a-8194-ec349e1f8377" />
 
-
 Then extend the matrix to also include 2 operating systems — how many total jobs run now?
+
+```yaml
+
+name: matrix-check
+on:
+  workflow_dispatch:
+
+jobs:
+  python-matrix:
+    strategy:
+      matrix:
+        version:
+          - '3.10'
+          - '3.11'
+          - '3.12'
+        os:
+          - 'ubuntu-latest'
+          - 'ubuntu-22.04-arm'
+    runs-on: ${{  matrix.os  }}
+    steps:
+    - name: apt update
+      run: sudo apt-get update -y
+    - uses: actions/checkout@v7
+    - uses: actions/setup-python@v7
+      with:
+        python-version: '${{  matrix.version  }}'
+    - run: python --version
+
+```
+
+<img width="1429" height="629" alt="image" src="https://github.com/user-attachments/assets/802fc1e7-159f-472f-a637-c1064a2c3cc4" />
 
 ---
 
