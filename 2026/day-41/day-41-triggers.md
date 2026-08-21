@@ -81,6 +81,33 @@ on:
 3. Print the input value in a step
 4. Go to the **Actions** tab → find the workflow → click **Run workflow**
 
+```yaml
+
+name: manual run
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        type: choice
+        description: environment
+        options: 
+        - staging
+        - production
+
+jobs:
+  manual-run-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: print environment
+      run: echo "${{ inputs.name }}"
+    - name: print environment2
+      run: echo "${{ github.event.inputs.name }}"
+
+```
+
+<img width="1413" height="713" alt="image" src="https://github.com/user-attachments/assets/930792d2-00a1-4329-8ccc-8b0eed25553a" />
+
+
 **Verify:** Can you trigger it manually and see your input printed?
 
 ---
@@ -91,6 +118,35 @@ Create `.github/workflows/matrix.yml` that:
    - Python versions: `3.10`, `3.11`, `3.12`
 2. Each job installs Python and prints the version
 3. Watch all 3 run in parallel
+
+```yaml
+
+name: matrix-check
+on:
+  workflow_dispatch:
+
+jobs:
+  python-matrix:
+    strategy:
+      matrix:
+        version:
+          - '3.10'
+          - '3.11'
+          - '3.12'
+    runs-on: ubuntu-latest
+    steps:
+    - name: apt update
+      run: sudo apt-get update -y
+    - uses: actions/checkout@v7
+    - uses: actions/setup-python@v7
+      with:
+        python-version: '${{  matrix.version  }}'
+    - run: python --version
+
+```
+
+<img width="1425" height="606" alt="image" src="https://github.com/user-attachments/assets/1ac96582-0f9b-4c3a-8194-ec349e1f8377" />
+
 
 Then extend the matrix to also include 2 operating systems — how many total jobs run now?
 
