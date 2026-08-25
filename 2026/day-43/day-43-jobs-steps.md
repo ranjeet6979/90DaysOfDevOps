@@ -69,6 +69,33 @@ Print all three in a single step and verify each is accessible.
 
 Then use a **GitHub context variable** — print the commit SHA and the actor (who triggered the run).
 
+```yaml
+name: env variable print
+
+on:
+  workflow_dispatch
+
+env:
+  APP_NAME: myapp
+
+jobs:
+  variable-job:
+    runs-on: ubuntu-latest
+    env:
+      ENVIRONMENT: staging
+    steps:
+      - name: "print workflow, job and step env variables"
+        run: echo "$APP_NAME $ENVIRONMENT $VERSION"
+        env:
+          VERSION: 1.0.0
+      - name: "print github content"
+        run: echo ${{ github.sha }}
+      - name: "print github actor"
+        run: echo ${{ github.actor }}
+```        
+
+<img width="1449" height="591" alt="image" src="https://github.com/user-attachments/assets/de0d237e-5382-4811-a8cd-7457b9922ac6" />
+
 ---
 
 ### Task 3: Job Outputs
