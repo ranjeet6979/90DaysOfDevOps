@@ -179,6 +179,42 @@ Create `.github/workflows/smart-pipeline.yml` that:
 2. Has a `lint` job and a `test` job running in parallel
 3. Has a `summary` job that runs after both, prints whether it's a `main` branch push or a feature branch push, and prints the commit message
 
+```yaml
+name: smart-pipeline
+on:
+  push:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: lint-step
+        run: echo "this is lint job"
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test-step
+        run: echo "this is test job"
+
+  summary:
+    runs-on: ubuntu-latest
+    needs:
+      - lint
+      - test
+    steps:
+      - name: summary-step
+        run: echo "this is summary job and commit message was ${{  github.event.commits[0].message }}"
+```
+
+<img width="1447" height="513" alt="image" src="https://github.com/user-attachments/assets/b77b7212-5d1d-4da2-8875-cfeea932bd11" />
+
+<img width="1448" height="421" alt="image" src="https://github.com/user-attachments/assets/32786fa7-6b57-4dc2-934e-a3661c623461" />
+
+<img width="1446" height="413" alt="image" src="https://github.com/user-attachments/assets/119762f7-96b7-48ca-8ad4-7c12d916fe70" />
+
+<img width="1446" height="420" alt="image" src="https://github.com/user-attachments/assets/78ce7be8-3e19-48f6-9c86-3710ed00e2b2" />
+
 ---
 
 ## Hints
