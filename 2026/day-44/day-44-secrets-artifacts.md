@@ -40,7 +40,8 @@ jobs:
 <img width="1448" height="516" alt="image" src="https://github.com/user-attachments/assets/71b0263f-c366-4ce2-8cb8-18ae0e513dd3" />
 
 4. Try to print `${{ secrets.MY_SECRET_MESSAGE }}` directly — what does GitHub show?
-It will show *** output instead of printing actual secret.
+  
+* It will show *** output instead of printing actual secret.
 
 Q: Why should you never print secrets in CI logs?
 
