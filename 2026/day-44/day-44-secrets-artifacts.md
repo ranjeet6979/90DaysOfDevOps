@@ -177,12 +177,20 @@ Artifacts ensure the **same build output** is used across all pipeline stages wi
 Take any script from your earlier days (Python or Shell) and run it in CI:
 1. Add your script to the `github-actions-practice` repo
 
+#### calculator_test.py
+
 ```python
 import numpy as np
 numbers = np.array([10, 20, 30, 40])
 total = np.sum(numbers)
 assert total == 100, f"Expected 100 but got {total}"
 print("✅ Calculator test passed")
+```
+
+#### requirements.txt
+
+```text
+numpy
 ```
 
 2. Write a workflow that:
@@ -225,6 +233,8 @@ jobs:
 
 Changed the code so that total is not 100
 
+**calculator_test.py**
+
 ```python
 
 import numpy as np
@@ -233,6 +243,12 @@ total = np.sum(numbers)
 assert total == 100, f"Expected 100 but got {total}"
 print("✅ Calculator test passed")
 
+```
+
+#### requirements.txt
+
+```text
+numpy
 ```
 
 <img width="1323" height="574" alt="image" src="https://github.com/user-attachments/assets/ceaeb043-756f-4d8c-9928-39dc697d085c" />
