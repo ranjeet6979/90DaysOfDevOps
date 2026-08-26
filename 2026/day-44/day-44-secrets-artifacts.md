@@ -223,6 +223,8 @@ jobs:
 
 3. Intentionally break the script — verify the pipeline goes red
 
+Changed the code so that total is not 100
+
 ```python
 
 import numpy as np
