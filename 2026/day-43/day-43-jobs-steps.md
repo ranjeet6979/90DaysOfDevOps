@@ -139,6 +139,38 @@ In a workflow, add:
 3. A job that only runs on **push** events, not on pull requests
 4. A step with `continue-on-error: true` — what does this do?
 
+```yaml
+name: conditional
+on: 
+  push:
+    branches: main
+
+jobs:
+  conditional-job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check if main
+        if: github.ref == 'refs/heads/main'
+        run: echo "this runs only if it is main branch"
+
+      - name: failed step
+        id: demo
+        run: exit 1
+
+      - name: run if previous step failed
+        if: ${{ failure() && steps.demo.conclusion == 'failure' }}
+        run: echo "this runs if previous step fails" 
+
+  conditional-job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: on-push event
+        if: contains(fromJSON('["push"]'), github.event_name)
+        run: echo "this runs only if it is push event"
+```
+
+<img width="1448" height="429" alt="image" src="https://github.com/user-attachments/assets/b15039fa-6d13-4c30-97b5-c2577a95318d" />
+
 ---
 
 ### Task 5: Putting It Together
