@@ -93,6 +93,25 @@ jobs:
 2. Use `actions/upload-artifact` to save it
 3. After the workflow runs, download the artifact from the Actions tab
 
+```yaml
+name: artifact-upload
+on: workflow_dispatch
+
+jobs:
+  artifact-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: generate file
+        run: echo "test file" >> artifact-test-file.txt
+      - uses: actions/upload-artifact@v7
+        with:
+          name: my-artifact
+          path: artifact-test-file.txt
+```
+
+<br><img width="1327" height="573" alt="image" src="https://github.com/user-attachments/assets/854cae00-5b60-4a03-8c93-18a72b2f93c5" />
+
+
 **Verify:** Can you see and download it from GitHub?
 
 ---
