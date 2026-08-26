@@ -18,9 +18,6 @@ Today your pipeline starts doing **real work** — storing sensitive values secu
 1. Go to your repo → Settings → Secrets and Variables → Actions
 2. Create a secret called `MY_SECRET_MESSAGE`
 3. Create a workflow that reads it and prints: `The secret is set: true` (never print the actual value)
-4. Try to print `${{ secrets.MY_SECRET_MESSAGE }}` directly — what does GitHub show?
-
-Write in your notes: Why should you never print secrets in CI logs?
 
 ```yaml
 name: secrets-check
@@ -41,6 +38,16 @@ jobs:
 ```
 
 <img width="1448" height="516" alt="image" src="https://github.com/user-attachments/assets/71b0263f-c366-4ce2-8cb8-18ae0e513dd3" />
+
+4. Try to print `${{ secrets.MY_SECRET_MESSAGE }}` directly — what does GitHub show?
+It will show *** output instead of printing actual secret.
+
+Write in your notes: Why should you never print secrets in CI logs?
+GitHub masks secrets with ***, but if a secret is reversed, split, or encoded (like Base64), GitHub will not recognize it and will print it in plain text.
+
+**Artifact exposure:** If a step prints a secret to a file and that file is saved as a workflow artifact, anyone with repository access can download and read it.
+
+**Best Practice:** Always pass secrets directly as environment variables (env: SECRET_TOKEN: ${{ secrets.GITHUB_TOKEN }}) to the specific step or action that needs them, instead of using echo or run commands to view them.
 
 ---
 
