@@ -155,6 +155,7 @@ Artifacts are files generated during a workflow and saved for later use.
 
 #### Example Flow
 
+```text
 Build Job
 ↓
 Upload Artifact (app.jar)
@@ -164,6 +165,7 @@ Test Job
 Download Artifact
 ↓
 Deploy Job
+```
 
 #### Key Benefit
 
