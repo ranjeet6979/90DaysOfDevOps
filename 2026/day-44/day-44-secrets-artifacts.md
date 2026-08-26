@@ -333,10 +333,14 @@ On the GitHub Actions runner, this expands to:
    - Dependencies are downloaded from PyPI.
    - Cache is created and saved.
 
+<img width="622" height="155" alt="image" src="https://github.com/user-attachments/assets/89cf8c77-4574-40fb-b804-879c88edd34e" />
+
 2. Subsequent workflow runs:
    - Cache is restored using the cache key.
    - Previously downloaded packages are reused.
    - Workflow runs faster.
+
+<img width="625" height="140" alt="image" src="https://github.com/user-attachments/assets/294ee963-fb56-4ad3-8a79-335ab92462e3" />
 
 ##### Cache Key
 
@@ -354,10 +358,6 @@ key: ${{ runner.os }}-pip-${{ hashFiles('python-app/requirements.txt') }}
 - Reduced dependency download time
 - Lower network usage
 - More efficient CI/CD pipelines
-
-<img width="622" height="155" alt="image" src="https://github.com/user-attachments/assets/89cf8c77-4574-40fb-b804-879c88edd34e" />
-
-<img width="625" height="140" alt="image" src="https://github.com/user-attachments/assets/294ee963-fb56-4ad3-8a79-335ab92462e3" />
 
 ---
 
