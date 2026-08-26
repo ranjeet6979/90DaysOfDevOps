@@ -37,10 +37,10 @@ jobs:
       if: env.SUPER_SECRET != ''
       run: |
         echo "The secret is set: true"
+        echo "$SUPER_SECRET"
 ```
 
-<img width="1448" height="417" alt="image" src="https://github.com/user-attachments/assets/4bb6b0b7-b0a1-4af0-a10e-1af39216e755" />
-
+<img width="1448" height="516" alt="image" src="https://github.com/user-attachments/assets/71b0263f-c366-4ce2-8cb8-18ae0e513dd3" />
 
 ---
 
