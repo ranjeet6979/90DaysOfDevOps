@@ -66,7 +66,7 @@ chmod +x hello.sh
    - Takes a number using `read`
    - Prints whether it is **positive**, **negative**, or **zero**
 
-    <img width="376" height="359" alt="image" src="https://github.com/user-attachments/assets/aadc711f-319a-4c82-8685-44f80195a8ed" />
+     <img width="376" height="359" alt="image" src="https://github.com/user-attachments/assets/aadc711f-319a-4c82-8685-44f80195a8ed" />
 
 2. Create `file_check.sh` that:
    - Asks for a filename
