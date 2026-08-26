@@ -1,4 +1,4 @@
-# Day 44 – Secrets, Artifacts & Running Real Tests in CI
+<img width="1343" height="444" alt="image" src="https://github.com/user-attachments/assets/b63fa083-12d1-4c6c-a45c-a7a68f3baaf5" /><img width="1343" height="444" alt="image" src="https://github.com/user-attachments/assets/f3f61685-b24b-4503-8098-10b6b2c2f202" /># Day 44 – Secrets, Artifacts & Running Real Tests in CI
 
 ## Task
 Today your pipeline starts doing **real work** — storing sensitive values securely, saving build outputs, and running actual tests from your previous days.
@@ -55,6 +55,36 @@ Q: Why should you never print secrets in CI logs?
 1. Pass a secret to a step as an environment variable
 2. Use it in a shell command without ever hardcoding it
 3. Add `DOCKER_USERNAME` and `DOCKER_TOKEN` as secrets (you'll need these on Day 45)
+
+```yaml
+
+name: secrets-check
+
+on: workflow_dispatch
+
+jobs:
+  secret-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: secret step
+      env:
+        SUPER_SECRET: ${{ secrets.MY_SECRET_MESSAGE }}
+      if: env.SUPER_SECRET != ''
+      run: |
+        echo "The secret is set: true"
+        echo "$SUPER_SECRET"
+
+    - name: Use secrets as environment variables
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+      run: |
+        echo "Docker username is $DOCKER_USERNAME"
+        echo "Docker token length: ${#DOCKER_TOKEN}"
+
+```
+
+<img width="1343" height="444" alt="image" src="https://github.com/user-attachments/assets/82c245d6-1205-41ae-bff1-1d0fb152d7dd" />
 
 ---
 
