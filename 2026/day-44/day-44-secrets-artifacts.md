@@ -143,6 +143,32 @@ jobs:
 
 Write in your notes: When would you use artifacts in a real pipeline?
 
+Artifacts are files generated during a workflow and saved for later use.
+
+#### Common Use Cases
+
+- **Share build outputs** between jobs (e.g., JAR, WAR, ZIP files)
+- **Store test reports** for review after pipeline execution
+- **Save logs** for troubleshooting failed jobs
+- **Preserve security scan results** (Trivy, OWASP, etc.
+- **Store deployment packages** for release and deployment stages
+
+#### Example Flow
+
+Build Job
+↓
+Upload Artifact (app.jar)
+↓
+Test Job
+↓
+Download Artifact
+↓
+Deploy Job
+
+#### Key Benefit
+
+Artifacts ensure the **same build output** is used across all pipeline stages without rebuilding the application.
+
 ---
 
 ### Task 5: Run Real Tests in CI
