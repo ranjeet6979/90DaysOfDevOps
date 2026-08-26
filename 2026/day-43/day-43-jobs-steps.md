@@ -105,6 +105,31 @@ jobs:
 
 Write in your notes: Why would you pass outputs between jobs?
 
+```yaml
+name: job-output
+on: workflow_dispatch
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    outputs:
+      date: ${{ steps.step1.outputs.date }}
+    steps:
+      - id: step1
+        run: echo "date=$(date)" >> $GITHUB_OUTPUT
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - env:
+          OUTPUT1: ${{ needs.job1.outputs.date }}
+        run: echo "$OUTPUT1"
+```
+
+<img width="1450" height="414" alt="image" src="https://github.com/user-attachments/assets/4a2fb5b6-f9ec-4801-ba69-23190695d92d" />
+
+<img width="1451" height="459" alt="image" src="https://github.com/user-attachments/assets/d58dd0c1-016d-4428-aa09-a05ef9de9956" />
+
 ---
 
 ### Task 4: Conditionals
