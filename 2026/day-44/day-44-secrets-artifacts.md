@@ -43,11 +43,9 @@ jobs:
 It will show *** output instead of printing actual secret.
 
 Write in your notes: Why should you never print secrets in CI logs?
-GitHub masks secrets with ***, but if a secret is reversed, split, or encoded (like Base64), GitHub will not recognize it and will print it in plain text.
-
-**Artifact exposure:** If a step prints a secret to a file and that file is saved as a workflow artifact, anyone with repository access can download and read it.
-
-**Best Practice:** Always pass secrets directly as environment variables (env: SECRET_TOKEN: ${{ secrets.GITHUB_TOKEN }}) to the specific step or action that needs them, instead of using echo or run commands to view them.
+<br>GitHub masks secrets with ***, but if a secret is reversed, split, or encoded (like Base64), GitHub will not recognize it and will print it in plain text.
+<br> **Artifact exposure:** If a step prints a secret to a file and that file is saved as a workflow artifact, anyone with repository access can download and read it.
+<br> **Best Practice:** Always pass secrets directly as environment variables (env: SECRET_TOKEN: ${{ secrets.GITHUB_TOKEN }}) to the specific step or action that needs them, instead of using echo or run commands to view them.
 
 ---
 
