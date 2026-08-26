@@ -176,12 +176,65 @@ Artifacts ensure the **same build output** is used across all pipeline stages wi
 ### Task 5: Run Real Tests in CI
 Take any script from your earlier days (Python or Shell) and run it in CI:
 1. Add your script to the `github-actions-practice` repo
+
+```python
+import numpy as np
+numbers = np.array([10, 20, 30, 40])
+total = np.sum(numbers)
+assert total == 100, f"Expected 100 but got {total}"
+print("✅ Calculator test passed")
+```
+
 2. Write a workflow that:
    - Checks out the code
    - Installs any dependencies needed
    - Runs the script
    - Fails the pipeline if the script exits with a non-zero code
+  
+```yaml
+
+name: Run python Tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v7
+
+      - name: Set Up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+
+      - name: Install Dependencies
+        run: pip install -r python-app/requirements.txt
+
+      - name: Run Test Script
+        run: python python-app/calculator_test.py
+
+```
+    <img width="1323" height="582" alt="image" src="https://github.com/user-attachments/assets/85183a1b-76a7-4451-b165-5accf617756b" />
+
+
 3. Intentionally break the script — verify the pipeline goes red
+
+```python
+
+import numpy as np
+numbers = np.array([10, 20, 30, 30])
+total = np.sum(numbers)
+assert total == 100, f"Expected 100 but got {total}"
+print("✅ Calculator test passed")
+
+```
+
+<img width="1323" height="574" alt="image" src="https://github.com/user-attachments/assets/ceaeb043-756f-4d8c-9928-39dc697d085c" />
+
 4. Fix it — verify it goes green again
 
 ---
