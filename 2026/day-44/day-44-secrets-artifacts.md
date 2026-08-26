@@ -260,7 +260,104 @@ numpy
 ### Task 6: Caching
 1. Add `actions/cache` to a workflow that installs dependencies
 2. Run it twice — observe the time difference
+
+```yaml
+name: Run python Tests
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v7
+
+      - name: Set Up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+
+      - uses: actions/cache@v6
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('python-app/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install Dependencies
+        run: pip install -r python-app/requirements.txt
+
+      - name: Run Test Script
+        run: python python-app/calculator_test.py
+```
+
+<img width="1314" height="387" alt="image" src="https://github.com/user-attachments/assets/1ecc7516-8ab4-47cf-8bfc-411780cb5bd6" />
+
 3. Write in your notes: What is being cached and where is it stored?
+
+#### What Is Being Cached and Where Is It Stored?
+
+##### What Is Being Cached?
+
+The following configuration caches Python packages downloaded by `pip`:
+
+```yaml
+- uses: actions/cache@v6
+  with:
+    path: ~/.cache/pip
+```
+
+This cache contains:
+- Downloaded Python packages
+- Package metadata
+- Files required by `pip install`
+
+##### Where Is It Stored?
+
+```text
+~/.cache/pip
+```
+
+On the GitHub Actions runner, this expands to:
+
+```text
+/home/runner/.cache/pip
+```
+
+##### How It Works
+
+1. First workflow run:
+   - Dependencies are downloaded from PyPI.
+   - Cache is created and saved.
+
+2. Subsequent workflow runs:
+   - Cache is restored using the cache key.
+   - Previously downloaded packages are reused.
+   - Workflow runs faster.
+
+##### Cache Key
+
+```yaml
+key: ${{ runner.os }}-pip-${{ hashFiles('python-app/requirements.txt') }}
+```
+
+- `runner.os` identifies the operating system.
+- `hashFiles()` creates a hash of `requirements.txt`.
+- If `requirements.txt` changes, a new cache is created automatically.
+
+##### Benefits
+
+- Faster workflow execution
+- Reduced dependency download time
+- Lower network usage
+- More efficient CI/CD pipelines
+
+<img width="622" height="155" alt="image" src="https://github.com/user-attachments/assets/89cf8c77-4574-40fb-b804-879c88edd34e" />
+
+<img width="625" height="140" alt="image" src="https://github.com/user-attachments/assets/294ee963-fb56-4ad3-8a79-335ab92462e3" />
 
 ---
 
