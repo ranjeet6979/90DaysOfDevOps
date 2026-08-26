@@ -32,7 +32,7 @@ chmod +x hello.sh
 ```
 
 **Document:** What happens if you remove the shebang line?
-if shebag line is removed, script will be executed using default shell of the user running the script, in screenshot below, default shell of the user running the script was /bin/bash hence ran with the bash interpreter.
+* if shebag line is removed, script will be executed using default shell of the user running the script, in screenshot below, default shell of the user running the script was /bin/bash hence ran with the bash interpreter.
 
 <img width="311" height="133" alt="image" src="https://github.com/user-attachments/assets/dcd60e55-20e1-490e-8cab-018cceeaefeb" />
 
