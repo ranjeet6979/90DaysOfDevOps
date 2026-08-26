@@ -46,7 +46,7 @@ chmod +x hello.sh
      
      <img width="353" height="83" alt="image" src="https://github.com/user-attachments/assets/00e122c9-cf5b-4961-85a4-ad784055f4c8" />
 
-     <img width="397" height="101" alt="image" src="https://github.com/user-attachments/assets/d9da425b-dda2-439e-b75e-739ba8dc3022" />
+     <br><img width="397" height="101" alt="image" src="https://github.com/user-attachments/assets/d9da425b-dda2-439e-b75e-739ba8dc3022" />
 
 2. Try using single quotes vs double quotes — what's the difference?
     - running with single quote and double quote gives same output
