@@ -120,6 +120,27 @@ jobs:
 1. Job 1: generate a file and upload it as an artifact
 2. Job 2: download the artifact from Job 1 and use it (print its contents)
 
+```yaml
+name: artifact-upload
+on: workflow_dispatch
+
+jobs:
+  artifact-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: generate file
+        run: echo "test file" >> artifact-test-file.txt
+      - uses: actions/upload-artifact@v7
+        with:
+          name: my-artifact
+          path: artifact-test-file.txt
+```
+
+<img width="1326" height="533" alt="image" src="https://github.com/user-attachments/assets/8342684d-a5b9-4406-8a0e-1949ae645ede" />
+
+<img width="1327" height="573" alt="image" src="https://github.com/user-attachments/assets/df456a54-cf6d-451c-92b7-ce040b5e83c3" />
+
+
 Write in your notes: When would you use artifacts in a real pipeline?
 
 ---
