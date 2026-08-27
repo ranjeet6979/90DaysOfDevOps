@@ -73,6 +73,22 @@ chmod +x hello.sh
    - Checks if the file **exists** using `-f`
    - Prints appropriate message
 
+```
+bash
+#!/bin/bash
+
+echo "enter file name to check if exist"
+read filename
+
+if [ -f $filename ]; then
+  echo "File $filename exists"
+else
+  echo "File $filename does not exist"
+fi
+```
+
+<img width="487" height="138" alt="image" src="https://github.com/user-attachments/assets/d2960039-6e90-44e3-bd12-302585752639" />
+
 ---
 
 ### Task 5: Combine It All
