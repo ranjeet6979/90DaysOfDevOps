@@ -47,9 +47,9 @@ You will:
 ### Task 3: Strict Mode — `set -euo pipefail`
 1. Create `strict_demo.sh` with `set -euo pipefail` at the top
 2. Try using an **undefined variable** — what happens with `set -u`?
-   <br> if set -u is set and undefined variable is used in the script, script execution fail with an error "./strict_demo.sh: line 4: name: unbound variable"
-   <br> if set -u is not used, script execution completes and undefined variable in put as blank. 
-   <br>
+   - if set -u is set and undefined variable is used in the script, script execution fail with an error "./strict_demo.sh: line 4: name: unbound variable"
+   - if set -u is not used, script execution completes and undefined variable in put as blank. 
+   
    <img width="344" height="258" alt="image" src="https://github.com/user-attachments/assets/6f652270-0153-43fb-ac0d-3829501822f4" />
 
 4. Try a command that **fails** — what happens with `set -e`?
