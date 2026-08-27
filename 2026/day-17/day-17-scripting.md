@@ -95,6 +95,8 @@ mkdir /tmp/devops-test || echo "Directory already exists"
 
 2. Modify your `install_packages.sh` to check if the script is being run as root — exit with a message if not.
 
+<img width="430" height="147" alt="image" src="https://github.com/user-attachments/assets/84b9322d-6536-4d2e-81cc-741d7610e367" />
+
 ---
 
 ## Hints
@@ -103,9 +105,6 @@ mkdir /tmp/devops-test || echo "Directory already exists"
 - Arguments: `$1` first arg, `$#` count, `$@` all args
 - Check root: `if [ "$EUID" -ne 0 ]; then echo "Run as root"; exit 1; fi`
 - Check package: `dpkg -s <pkg> &> /dev/null && echo "installed"`
-
-<img width="430" height="147" alt="image" src="https://github.com/user-attachments/assets/84b9322d-6536-4d2e-81cc-741d7610e367" />
-
 
 ---
 
