@@ -61,10 +61,109 @@ You will:
 
 6. Try a **piped command** where one part fails — what happens with `set -o pipefail`?
 
-**Document:** What does each flag do?
+#### What does each flag do?
 - `set -e` →
 - `set -u` →
 - `set -o pipefail` →
+
+##### `set -e`
+
+- Causes the script to exit immediately if a command returns a non-zero (error) exit status.
+- Helps prevent the script from continuing when a command fails.
+
+**Example:**
+
+```bash
+set -e
+
+cp file1.txt /tmp/
+cp missing.txt /tmp/   # Fails here
+echo "Done"            # Not executed
+```
+
+**Memory Trick:**
+
+> `e` = Exit on Error
+
+---
+
+##### `set -u`
+
+- Causes the script to exit if an undefined (unset) variable is referenced.
+- Does **not** fail when a variable is defined but contains an empty value.
+
+**Example (Fails):**
+
+```bash
+set -u
+
+echo "$NAME"
+```
+
+Output:
+
+```text
+bash: NAME: unbound variable
+```
+
+**Example (Works):**
+
+```bash
+set -u
+
+NAME=""
+echo "$NAME"
+```
+
+This works because `NAME` is defined, even though it is empty.
+
+**Memory Trick:**
+
+> `u` = Undefined Variable Check
+
+---
+
+#### Common Production Usage
+
+```bash
+set -euo pipefail
+```
+
+##### What Each Option Does
+
+```bash
+set -e
+```
+
+> Exit immediately when a command fails.
+
+```bash
+set -u
+```
+
+> Exit when an undefined variable is used.
+
+```bash
+set -o pipefail
+```
+
+> A pipeline fails if any command within the pipeline fails.
+
+**Example:**
+
+```bash
+grep "error" missing.log | wc -l
+```
+
+Without `pipefail`, the pipeline may still succeed even if `grep` fails.
+
+With `pipefail`, the entire pipeline fails.
+
+---
+
+#### Interview Answer
+
+> `set -e` makes the shell script exit immediately when a command returns a non-zero exit code. `set -u` makes the script exit when an undefined variable is referenced. These flags help make shell scripts safer and easier to troubleshoot.
 
 ---
 
