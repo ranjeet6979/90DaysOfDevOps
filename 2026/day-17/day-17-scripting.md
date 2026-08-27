@@ -95,6 +95,30 @@ mkdir /tmp/devops-test || echo "Directory already exists"
 
 2. Modify your `install_packages.sh` to check if the script is being run as root — exit with a message if not.
 
+   ```bash
+   
+#!/bin/bash
+
+Check if running as root
+if [ "$EUID" -ne 0 ]; then
+    echo "Run as root"
+    exit 1
+fi
+
+for package in nginx curl wget; do
+    dpkg -s "$package" > /dev/null 2>&1
+
+    if [ $? -eq 0 ]; then
+        echo "$package already installed"
+    else
+        echo "not installed... installing $package"
+        apt-get install "$package" -y > /dev/null 2>&1
+        systemctl status "$package"
+    fi
+done
+
+```
+
    <img width="430" height="147" alt="image" src="https://github.com/user-attachments/assets/84b9322d-6536-4d2e-81cc-741d7610e367" />
 
 ---
